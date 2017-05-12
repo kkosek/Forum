@@ -1,0 +1,278 @@
+format version: 5
+output mode:
+1 items
+0 -> single
+output directories:
+1 items
+output dir -> /home/kasia/scalaLearning/Forum/target/scala-2.12/classes
+compile options:
+0 items
+javac options:
+0 items
+compiler version:
+1 items
+0 -> 2.12.2
+compile order:
+1 items
+0 -> Mixed
+name hashing:
+1 items
+0 -> true
+products:
+4 items
+/home/kasia/scalaLearning/Forum/src/main/scala/DataBaseConnection.scala -> /home/kasia/scalaLearning/Forum/target/scala-2.12/classes/DataBaseConnection$.class
+/home/kasia/scalaLearning/Forum/src/main/scala/DataBaseConnection.scala -> /home/kasia/scalaLearning/Forum/target/scala-2.12/classes/DataBaseConnection.class
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> /home/kasia/scalaLearning/Forum/target/scala-2.12/classes/WebServer$.class
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> /home/kasia/scalaLearning/Forum/target/scala-2.12/classes/WebServer.class
+binary dependencies:
+8 items
+/home/kasia/scalaLearning/Forum/src/main/scala/DataBaseConnection.scala -> /home/kasia/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.2.jar
+/home/kasia/scalaLearning/Forum/src/main/scala/DataBaseConnection.scala -> /usr/lib/jvm/java-8-oracle/jre/lib/rt.jar
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> /home/kasia/.ivy2/cache/com.typesafe.akka/akka-actor_2.12/jars/akka-actor_2.12-2.5.1.jar
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> /home/kasia/.ivy2/cache/com.typesafe.akka/akka-http-core_2.12/jars/akka-http-core_2.12-10.0.6.jar
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> /home/kasia/.ivy2/cache/com.typesafe.akka/akka-http_2.12/jars/akka-http_2.12-10.0.6.jar
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> /home/kasia/.ivy2/cache/com.typesafe.akka/akka-stream_2.12/jars/akka-stream_2.12-2.5.1.jar
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> /home/kasia/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.2.jar
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> /usr/lib/jvm/java-8-oracle/jre/lib/rt.jar
+direct source dependencies:
+0 items
+direct external dependencies:
+0 items
+public inherited source dependencies:
+0 items
+public inherited external dependencies:
+0 items
+member reference internal dependencies:
+0 items
+member reference external dependencies:
+0 items
+inheritance internal dependencies:
+0 items
+inheritance external dependencies:
+0 items
+class names:
+4 items
+/home/kasia/scalaLearning/Forum/src/main/scala/DataBaseConnection.scala -> DataBaseConnection
+/home/kasia/scalaLearning/Forum/src/main/scala/DataBaseConnection.scala -> DataBaseConnection$
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> WebServer
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> WebServer$
+used names:
+167 items
+/home/kasia/scalaLearning/Forum/src/main/scala/DataBaseConnection.scala -> +
+/home/kasia/scalaLearning/Forum/src/main/scala/DataBaseConnection.scala -> <init>
+/home/kasia/scalaLearning/Forum/src/main/scala/DataBaseConnection.scala -> ?0
+/home/kasia/scalaLearning/Forum/src/main/scala/DataBaseConnection.scala -> Any
+/home/kasia/scalaLearning/Forum/src/main/scala/DataBaseConnection.scala -> AnyRef
+/home/kasia/scalaLearning/Forum/src/main/scala/DataBaseConnection.scala -> Array
+/home/kasia/scalaLearning/Forum/src/main/scala/DataBaseConnection.scala -> Boolean
+/home/kasia/scalaLearning/Forum/src/main/scala/DataBaseConnection.scala -> Class
+/home/kasia/scalaLearning/Forum/src/main/scala/DataBaseConnection.scala -> Connection
+/home/kasia/scalaLearning/Forum/src/main/scala/DataBaseConnection.scala -> DataBaseConnection
+/home/kasia/scalaLearning/Forum/src/main/scala/DataBaseConnection.scala -> DriverManager
+/home/kasia/scalaLearning/Forum/src/main/scala/DataBaseConnection.scala -> Nothing
+/home/kasia/scalaLearning/Forum/src/main/scala/DataBaseConnection.scala -> Object
+/home/kasia/scalaLearning/Forum/src/main/scala/DataBaseConnection.scala -> Predef
+/home/kasia/scalaLearning/Forum/src/main/scala/DataBaseConnection.scala -> ResultSet
+/home/kasia/scalaLearning/Forum/src/main/scala/DataBaseConnection.scala -> Statement
+/home/kasia/scalaLearning/Forum/src/main/scala/DataBaseConnection.scala -> String
+/home/kasia/scalaLearning/Forum/src/main/scala/DataBaseConnection.scala -> Throwable
+/home/kasia/scalaLearning/Forum/src/main/scala/DataBaseConnection.scala -> Unit
+/home/kasia/scalaLearning/Forum/src/main/scala/DataBaseConnection.scala -> close
+/home/kasia/scalaLearning/Forum/src/main/scala/DataBaseConnection.scala -> connection
+/home/kasia/scalaLearning/Forum/src/main/scala/DataBaseConnection.scala -> createStatement
+/home/kasia/scalaLearning/Forum/src/main/scala/DataBaseConnection.scala -> driver
+/home/kasia/scalaLearning/Forum/src/main/scala/DataBaseConnection.scala -> e
+/home/kasia/scalaLearning/Forum/src/main/scala/DataBaseConnection.scala -> executeQuery
+/home/kasia/scalaLearning/Forum/src/main/scala/DataBaseConnection.scala -> forName
+/home/kasia/scalaLearning/Forum/src/main/scala/DataBaseConnection.scala -> getConnection
+/home/kasia/scalaLearning/Forum/src/main/scala/DataBaseConnection.scala -> getString
+/home/kasia/scalaLearning/Forum/src/main/scala/DataBaseConnection.scala -> host
+/home/kasia/scalaLearning/Forum/src/main/scala/DataBaseConnection.scala -> java
+/home/kasia/scalaLearning/Forum/src/main/scala/DataBaseConnection.scala -> lang
+/home/kasia/scalaLearning/Forum/src/main/scala/DataBaseConnection.scala -> next
+/home/kasia/scalaLearning/Forum/src/main/scala/DataBaseConnection.scala -> password
+/home/kasia/scalaLearning/Forum/src/main/scala/DataBaseConnection.scala -> printStackTrace
+/home/kasia/scalaLearning/Forum/src/main/scala/DataBaseConnection.scala -> println
+/home/kasia/scalaLearning/Forum/src/main/scala/DataBaseConnection.scala -> resultSet
+/home/kasia/scalaLearning/Forum/src/main/scala/DataBaseConnection.scala -> scala
+/home/kasia/scalaLearning/Forum/src/main/scala/DataBaseConnection.scala -> sql
+/home/kasia/scalaLearning/Forum/src/main/scala/DataBaseConnection.scala -> statement
+/home/kasia/scalaLearning/Forum/src/main/scala/DataBaseConnection.scala -> url
+/home/kasia/scalaLearning/Forum/src/main/scala/DataBaseConnection.scala -> username
+/home/kasia/scalaLearning/Forum/src/main/scala/DataBaseConnection.scala -> while$1
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> <byname>
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> <init>
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> <repeated>
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> A
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> ActorMaterializer
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> ActorMaterializerSettings
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> ActorRefFactory
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> ActorSystem
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> Any
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> AnyRef
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> Array
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> ConnectionContext
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> ContentType
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> ContentTypes
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> Directive
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> Directive0
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> Directives
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> ExceptionHandler
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> ExecutionContext
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> ExecutionContextExecutor
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> Flow
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> Function1
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> Future
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> Http
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> HttpEntity
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> HttpExt
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> HttpRequest
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> HttpResponse
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> Int
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> L
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> LoggingAdapter
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> Marshaller
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> Materializer
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> MessageEntity
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> MessageEntityMarshaller
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> NonBinary
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> NotUsed
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> Nothing
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> Object
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> Option
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> ParserSettings
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> PathMatcher
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> PathMatcher0
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> Predef
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> RejectionHandler
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> Route
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> RouteConcatenation
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> RouteResult
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> RouteWithConcatenation
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> RoutingLog
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> RoutingSettings
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> S
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> ServerBinding
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> ServerSettings
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> StandardRoute
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> StdIn
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> Strict
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> String
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> StringContext
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> StringMarshaller
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> T
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> Terminated
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> ToEntityMarshaller
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> ToResponseMarshallable
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> ToResponseMarshaller
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> Try
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> U
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> Unit
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> WebServer
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> WithCharset
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> _enhanceRouteWithConcatenation
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> _segmentStringToPathMatcher
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> actor
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> addByNameNullaryApply
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> akka
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> apply
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> bindAndHandle
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> bindingFuture
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> complete
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> default
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> dispatcher
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> executionContext
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> flatMap
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> fromActorSystem
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> get
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> http
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> io
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> liftMarshaller
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> marshalling
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> materializer
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> model
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> onComplete
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> package
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> path
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> post
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> println
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> qual$1
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> readLine
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> route
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> route2HandlerFlow
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> s
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> scala
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> scaladsl
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> server
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> settings
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> stream
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> system
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> terminate
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> text/html(UTF-8)
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> unbind
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> x$10
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> x$11
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> x$12
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> x$13
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> x$14
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> x$15
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> x$16
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> x$3
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> x$4
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> x$5
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> x$6
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> x$7
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> x$8
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> x$9
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> ~
+product stamps:
+4 items
+/home/kasia/scalaLearning/Forum/target/scala-2.12/classes/DataBaseConnection$.class -> lastModified(1494623619000)
+/home/kasia/scalaLearning/Forum/target/scala-2.12/classes/DataBaseConnection.class -> lastModified(1494623619000)
+/home/kasia/scalaLearning/Forum/target/scala-2.12/classes/WebServer$.class -> lastModified(1494623619000)
+/home/kasia/scalaLearning/Forum/target/scala-2.12/classes/WebServer.class -> lastModified(1494623619000)
+source stamps:
+2 items
+/home/kasia/scalaLearning/Forum/src/main/scala/DataBaseConnection.scala -> hash(8be65da8e6f2bb569edfc086e016b02f9bfd98b3)
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> hash(7727cd2007d23ff9f9908a092710fc81dc5f85a5)
+binary stamps:
+6 items
+/home/kasia/.ivy2/cache/com.typesafe.akka/akka-actor_2.12/jars/akka-actor_2.12-2.5.1.jar -> lastModified(1493718089000)
+/home/kasia/.ivy2/cache/com.typesafe.akka/akka-http-core_2.12/jars/akka-http-core_2.12-10.0.6.jar -> lastModified(1493818059000)
+/home/kasia/.ivy2/cache/com.typesafe.akka/akka-http_2.12/jars/akka-http_2.12-10.0.6.jar -> lastModified(1493818075000)
+/home/kasia/.ivy2/cache/com.typesafe.akka/akka-stream_2.12/jars/akka-stream_2.12-2.5.1.jar -> lastModified(1493718307000)
+/home/kasia/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.2.jar -> lastModified(1492071552000)
+/usr/lib/jvm/java-8-oracle/jre/lib/rt.jar -> lastModified(1484849915000)
+class names:
+6 items
+/home/kasia/.ivy2/cache/com.typesafe.akka/akka-actor_2.12/jars/akka-actor_2.12-2.5.1.jar -> akka.actor.ActorRefFactory
+/home/kasia/.ivy2/cache/com.typesafe.akka/akka-http-core_2.12/jars/akka-http-core_2.12-10.0.6.jar -> akka.http.scaladsl.model.ContentTypes$
+/home/kasia/.ivy2/cache/com.typesafe.akka/akka-http_2.12/jars/akka-http_2.12-10.0.6.jar -> akka.http.scaladsl.server.Directive$
+/home/kasia/.ivy2/cache/com.typesafe.akka/akka-stream_2.12/jars/akka-stream_2.12-2.5.1.jar -> akka.stream.ActorMaterializer$
+/home/kasia/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.2.jar -> scala.StringContext$
+/usr/lib/jvm/java-8-oracle/jre/lib/rt.jar -> java.lang.Object
+internal apis:
+2 items
+/home/kasia/scalaLearning/Forum/src/main/scala/DataBaseConnection.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlSjH5SdlLSkQCAAdJAAdhcGlIYXNoWgAIaGFzTWFjcm9aABBoYXNQYWNrYWdlT2JqZWN0TAAYX2ludGVybmFsT25seV9uYW1lSGFzaGVzdAAkTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoZXM7TAADYXBpdAAVTHhzYnRpL2FwaS9Tb3VyY2VBUEk7TAALY29tcGlsYXRpb250ABdMeHNidGkvYXBpL0NvbXBpbGF0aW9uO1sABGhhc2h0AAJbQnhwQ07kqgAAc3IAInhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoZXNU2r6Z+tTsTAIAAlsAD2ltcGxpY2l0TWVtYmVyc3QAI1tMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2g7WwAOcmVndWxhck1lbWJlcnNxAH4AB3hwdXIAI1tMeHNidGkuYXBpLl9pbnRlcm5hbE9ubHlfTmFtZUhhc2g7SVqAtt2Wi/QCAAB4cAAAAAB1cQB+AAkAAAAVc3IAIHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoWw71InY4V88CAAJJAARoYXNoTAAEbmFtZXQAEkxqYXZhL2xhbmcvU3RyaW5nO3hwBi9Of3QABm5vdGlmeXNxAH4ADLuwxT50AAR3YWl0c3EAfgAM0tGpc3QADSRhc0luc3RhbmNlT2ZzcQB+AAxA2V+TdAAGZXF1YWxzc3EAfgAMCevbA3QADGFzSW5zdGFuY2VPZnNxAH4ADOtwQv10AAxzeW5jaHJvbml6ZWRzcQB+AAx8zZQidAANJGlzSW5zdGFuY2VPZnNxAH4ADAmrxnh0AARtYWluc3EAfgAMI1n7LHQACW5vdGlmeUFsbHNxAH4ADBdPjsd0AAxpc0luc3RhbmNlT2ZzcQB+AAzAepUudAACPT1zcQB+AAyWlhNidAAFY2xvbmVzcQB+AAxKQcu4dAASRGF0YUJhc2VDb25uZWN0aW9uc3EAfgAMwAbL23QACHRvU3RyaW5nc3EAfgAMaP9vcXQAAiE9c3EAfgAMJOB3zHQACGdldENsYXNzc3EAfgAMnI/0CHQAAm5lc3EAfgAMZuISH3QAAmVxc3EAfgAMQx46W3QAAiMjc3EAfgAMHcQWWXQACGZpbmFsaXplc3EAfgAMwuB1yXQACGhhc2hDb2Rlc3IAE3hzYnRpLmFwaS5Tb3VyY2VBUEm5Xqf5KSM4pAIAAlsAC2RlZmluaXRpb25zdAAXW0x4c2J0aS9hcGkvRGVmaW5pdGlvbjtbAAhwYWNrYWdlc3QAFFtMeHNidGkvYXBpL1BhY2thZ2U7eHB1cgAXW0x4c2J0aS5hcGkuRGVmaW5pdGlvbjuIyVzntONeDgIAAHhwAAAAAXNyABN4c2J0aS5hcGkuQ2xhc3NMaWtlgzQcod+wl2wCAARMAA5kZWZpbml0aW9uVHlwZXQAGkx4c2J0aS9hcGkvRGVmaW5pdGlvblR5cGU7WwAQc2F2ZWRBbm5vdGF0aW9uc3QAE1tMamF2YS9sYW5nL1N0cmluZztMAAhzZWxmVHlwZXQAEEx4c2J0aS9hcGkvTGF6eTtMAAlzdHJ1Y3R1cmVxAH4AQXhyACF4c2J0aS5hcGkuUGFyYW1ldGVyaXplZERlZmluaXRpb275EW6x1VA84gIAAVsADnR5cGVQYXJhbWV0ZXJzdAAaW0x4c2J0aS9hcGkvVHlwZVBhcmFtZXRlcjt4cgAUeHNidGkuYXBpLkRlZmluaXRpb26HKhvocULjRgIABEwABmFjY2Vzc3QAEkx4c2J0aS9hcGkvQWNjZXNzO1sAC2Fubm90YXRpb25zdAAXW0x4c2J0aS9hcGkvQW5ub3RhdGlvbjtMAAltb2RpZmllcnN0ABVMeHNidGkvYXBpL01vZGlmaWVycztMAARuYW1lcQB+AA14cHNyABB4c2J0aS5hcGkuUHVibGljulg9rmwtYEICAAB4cgAQeHNidGkuYXBpLkFjY2Vzc91imvgdYzFIAgAAeHB1cgAXW0x4c2J0aS5hcGkuQW5ub3RhdGlvbjvrl+sZEPaNSAIAAHhwAAAAAHNyABN4c2J0aS5hcGkuTW9kaWZpZXJzl+dh3BMme7MCAAFCAAVmbGFnc3hwAHEAfgAndXIAGltMeHNidGkuYXBpLlR5cGVQYXJhbWV0ZXI72W0mDyid8rYCAAB4cAAAAAB+cgAYeHNidGkuYXBpLkRlZmluaXRpb25UeXBlAAAAAAAAAAASAAB4cgAOamF2YS5sYW5nLkVudW0AAAAAAAAAABIAAHhwdAAGTW9kdWxldXIAE1tMamF2YS5sYW5nLlN0cmluZzut0lbn6R17RwIAAHhwAAAAAHNyACF4c2J0aS5hcGkuQWJzdHJhY3RMYXp5JFN0cmljdExhenkNZhxrKRYquAIAAUwABXZhbHVldAASTGphdmEvbGFuZy9PYmplY3Q7eHBzcgATeHNidGkuYXBpLkVtcHR5VHlwZbz9nkZJO4kkAgAAeHIAFHhzYnRpLmFwaS5TaW1wbGVUeXBlcnhiiCEjv0ACAAB4cgAOeHNidGkuYXBpLlR5cGU/atkhFkmqygIAAHhwc3EAfgBYc3IAE3hzYnRpLmFwaS5TdHJ1Y3R1cmWpqvmAk2/YAAIAA0wACGRlY2xhcmVkcQB+AEFMAAlpbmhlcml0ZWRxAH4AQUwAB3BhcmVudHNxAH4AQXhxAH4AXXNxAH4AWHVxAH4APAAAAAFzcgANeHNidGkuYXBpLkRlZlK+n+J8tDZpAgACTAAKcmV0dXJuVHlwZXQAEEx4c2J0aS9hcGkvVHlwZTtbAA92YWx1ZVBhcmFtZXRlcnN0ABpbTHhzYnRpL2FwaS9QYXJhbWV0ZXJMaXN0O3hxAH4AQnEAfgBLdXEAfgBMAAAAAHNxAH4ATgBxAH4AHXVxAH4AUAAAAABzcgAUeHNidGkuYXBpLlByb2plY3Rpb27z0o1U6UWkLQIAAkwAAmlkcQB+AA1MAAZwcmVmaXh0ABZMeHNidGkvYXBpL1NpbXBsZVR5cGU7eHEAfgBcdAAEVW5pdHNyABN4c2J0aS5hcGkuU2luZ2xldG9u/Kdf+M9W5EYCAAFMAARwYXRodAAQTHhzYnRpL2FwaS9QYXRoO3hxAH4AXHNyAA54c2J0aS5hcGkuUGF0aJs9XAjOpSeEAgABWwAKY29tcG9uZW50c3QAGltMeHNidGkvYXBpL1BhdGhDb21wb25lbnQ7eHB1cgAaW0x4c2J0aS5hcGkuUGF0aENvbXBvbmVudDtD2gl0LWcWdAIAAHhwAAAAAnNyAAx4c2J0aS5hcGkuSWSYMmyLN1PEQAIAAUwAAmlkcQB+AA14cgAXeHNidGkuYXBpLlBhdGhDb21wb25lbnRfmiJbLoafvAIAAHhwdAAFc2NhbGFzcgAOeHNidGkuYXBpLlRoaXPbCe2mzFpAXAIAAHhxAH4AeHVyABpbTHhzYnRpLmFwaS5QYXJhbWV0ZXJMaXN0O/XTOh3ys3DuAgAAeHAAAAABc3IAF3hzYnRpLmFwaS5QYXJhbWV0ZXJMaXN01sW8HGRJdOMCAAJaAAppc0ltcGxpY2l0WwAKcGFyYW1ldGVyc3QAHFtMeHNidGkvYXBpL01ldGhvZFBhcmFtZXRlcjt4cAB1cgAcW0x4c2J0aS5hcGkuTWV0aG9kUGFyYW1ldGVyO8+4xV2l3bVtAgAAeHAAAAABc3IAGXhzYnRpLmFwaS5NZXRob2RQYXJhbWV0ZXIfRa4X00mw6gIABFoACmhhc0RlZmF1bHRMAAhtb2RpZmllcnQAHUx4c2J0aS9hcGkvUGFyYW1ldGVyTW9kaWZpZXI7TAAEbmFtZXEAfgANTAADdHBlcQB+AGV4cAB+cgAbeHNidGkuYXBpLlBhcmFtZXRlck1vZGlmaWVyAAAAAAAAAAASAAB4cQB+AFN0AAVQbGFpbnQABGFyZ3NzcgAXeHNidGkuYXBpLlBhcmFtZXRlcml6ZWQWbO5pA8m7fwIAAkwACGJhc2VUeXBlcQB+AGxbAA10eXBlQXJndW1lbnRzdAARW0x4c2J0aS9hcGkvVHlwZTt4cQB+AFxzcQB+AGt0AAVBcnJheXEAfgBxdXIAEVtMeHNidGkuYXBpLlR5cGU7dP+lWnv56UECAAB4cAAAAAFzcQB+AGt0AAZTdHJpbmdzcQB+AG9zcQB+AHJ1cQB+AHUAAAADc3EAfgB3dAAEamF2YXNxAH4Ad3QABGxhbmdxAH4AfHNxAH4AWHVxAH4APAAAAABzcQB+AFh1cQB+AJAAAAACc3EAfgBrdAAGT2JqZWN0cQB+AJRzcQB+AGt0AANBbnlxAH4AcXVyABRbTHhzYnRpLmFwaS5QYWNrYWdlO1sTGTdwpyehAgAAeHAAAAAAc3IAFXhzYnRpLmFwaS5Db21waWxhdGlvbu364MNq6KBCAgACSgAJc3RhcnRUaW1lWwAHb3V0cHV0c3QAGltMeHNidGkvYXBpL091dHB1dFNldHRpbmc7eHAAAAFb/oJmgHVyABpbTHhzYnRpLmFwaS5PdXRwdXRTZXR0aW5nO39qwvOnh6VCAgAAeHAAAAABc3IAF3hzYnRpLmFwaS5PdXRwdXRTZXR0aW5netmaR3T7HXsCAAJMAA9vdXRwdXREaXJlY3RvcnlxAH4ADUwAD3NvdXJjZURpcmVjdG9yeXEAfgANeHB0ADkvaG9tZS9rYXNpYS9zY2FsYUxlYXJuaW5nL0ZvcnVtL3RhcmdldC9zY2FsYS0yLjEyL2NsYXNzZXN0AAEvdXIAAltCrPMX+AYIVOACAAB4cAAAABSL5l2o5vK7Vp7fwIbgFrAvm/2Ysw==
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlSjH5SdlLSkQCAAdJAAdhcGlIYXNoWgAIaGFzTWFjcm9aABBoYXNQYWNrYWdlT2JqZWN0TAAYX2ludGVybmFsT25seV9uYW1lSGFzaGVzdAAkTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoZXM7TAADYXBpdAAVTHhzYnRpL2FwaS9Tb3VyY2VBUEk7TAALY29tcGlsYXRpb250ABdMeHNidGkvYXBpL0NvbXBpbGF0aW9uO1sABGhhc2h0AAJbQnhwbOOWvwAAc3IAInhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoZXNU2r6Z+tTsTAIAAlsAD2ltcGxpY2l0TWVtYmVyc3QAI1tMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2g7WwAOcmVndWxhck1lbWJlcnNxAH4AB3hwdXIAI1tMeHNidGkuYXBpLl9pbnRlcm5hbE9ubHlfTmFtZUhhc2g7SVqAtt2Wi/QCAAB4cAAAAAB1cQB+AAkAAAAVc3IAIHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoWw71InY4V88CAAJJAARoYXNoTAAEbmFtZXQAEkxqYXZhL2xhbmcvU3RyaW5nO3hwrSfpqHQABm5vdGlmeXNxAH4ADIiqenR0AAR3YWl0c3EAfgAMcegVYHQADSRhc0luc3RhbmNlT2ZzcQB+AAxAmo6CdAAGZXF1YWxzc3EAfgAM0L+/WnQADGFzSW5zdGFuY2VPZnNxAH4ADFYkpCJ0AAxzeW5jaHJvbml6ZWRzcQB+AAz1VGx/dAANJGlzSW5zdGFuY2VPZnNxAH4ADGAbrpd0AAlXZWJTZXJ2ZXJzcQB+AAxSYQTTdAAEbWFpbnNxAH4ADP13tit0AAlub3RpZnlBbGxzcQB+AAzMhD+kdAAMaXNJbnN0YW5jZU9mc3EAfgAMxQqjg3QAAj09c3EAfgAMuKzNAXQABWNsb25lc3EAfgAMibN5+nQACHRvU3RyaW5nc3EAfgAMyn1oC3QAAiE9c3EAfgAMqrEKlXQACGdldENsYXNzc3EAfgAMwT1IX3QAAm5lc3EAfgAMXA+BW3QAAmVxc3EAfgAMZJcOTXQAAiMjc3EAfgAM9rzHbnQACGZpbmFsaXplc3EAfgAMMbyc2XQACGhhc2hDb2Rlc3IAE3hzYnRpLmFwaS5Tb3VyY2VBUEm5Xqf5KSM4pAIAAlsAC2RlZmluaXRpb25zdAAXW0x4c2J0aS9hcGkvRGVmaW5pdGlvbjtbAAhwYWNrYWdlc3QAFFtMeHNidGkvYXBpL1BhY2thZ2U7eHB1cgAXW0x4c2J0aS5hcGkuRGVmaW5pdGlvbjuIyVzntONeDgIAAHhwAAAAAXNyABN4c2J0aS5hcGkuQ2xhc3NMaWtlgzQcod+wl2wCAARMAA5kZWZpbml0aW9uVHlwZXQAGkx4c2J0aS9hcGkvRGVmaW5pdGlvblR5cGU7WwAQc2F2ZWRBbm5vdGF0aW9uc3QAE1tMamF2YS9sYW5nL1N0cmluZztMAAhzZWxmVHlwZXQAEEx4c2J0aS9hcGkvTGF6eTtMAAlzdHJ1Y3R1cmVxAH4AQXhyACF4c2J0aS5hcGkuUGFyYW1ldGVyaXplZERlZmluaXRpb275EW6x1VA84gIAAVsADnR5cGVQYXJhbWV0ZXJzdAAaW0x4c2J0aS9hcGkvVHlwZVBhcmFtZXRlcjt4cgAUeHNidGkuYXBpLkRlZmluaXRpb26HKhvocULjRgIABEwABmFjY2Vzc3QAEkx4c2J0aS9hcGkvQWNjZXNzO1sAC2Fubm90YXRpb25zdAAXW0x4c2J0aS9hcGkvQW5ub3RhdGlvbjtMAAltb2RpZmllcnN0ABVMeHNidGkvYXBpL01vZGlmaWVycztMAARuYW1lcQB+AA14cHNyABB4c2J0aS5hcGkuUHVibGljulg9rmwtYEICAAB4cgAQeHNidGkuYXBpLkFjY2Vzc91imvgdYzFIAgAAeHB1cgAXW0x4c2J0aS5hcGkuQW5ub3RhdGlvbjvrl+sZEPaNSAIAAHhwAAAAAHNyABN4c2J0aS5hcGkuTW9kaWZpZXJzl+dh3BMme7MCAAFCAAVmbGFnc3hwAHEAfgAddXIAGltMeHNidGkuYXBpLlR5cGVQYXJhbWV0ZXI72W0mDyid8rYCAAB4cAAAAAB+cgAYeHNidGkuYXBpLkRlZmluaXRpb25UeXBlAAAAAAAAAAASAAB4cgAOamF2YS5sYW5nLkVudW0AAAAAAAAAABIAAHhwdAAGTW9kdWxldXIAE1tMamF2YS5sYW5nLlN0cmluZzut0lbn6R17RwIAAHhwAAAAAHNyACF4c2J0aS5hcGkuQWJzdHJhY3RMYXp5JFN0cmljdExhenkNZhxrKRYquAIAAUwABXZhbHVldAASTGphdmEvbGFuZy9PYmplY3Q7eHBzcgATeHNidGkuYXBpLkVtcHR5VHlwZbz9nkZJO4kkAgAAeHIAFHhzYnRpLmFwaS5TaW1wbGVUeXBlcnhiiCEjv0ACAAB4cgAOeHNidGkuYXBpLlR5cGU/atkhFkmqygIAAHhwc3EAfgBYc3IAE3hzYnRpLmFwaS5TdHJ1Y3R1cmWpqvmAk2/YAAIAA0wACGRlY2xhcmVkcQB+AEFMAAlpbmhlcml0ZWRxAH4AQUwAB3BhcmVudHNxAH4AQXhxAH4AXXNxAH4AWHVxAH4APAAAAAFzcgANeHNidGkuYXBpLkRlZlK+n+J8tDZpAgACTAAKcmV0dXJuVHlwZXQAEEx4c2J0aS9hcGkvVHlwZTtbAA92YWx1ZVBhcmFtZXRlcnN0ABpbTHhzYnRpL2FwaS9QYXJhbWV0ZXJMaXN0O3hxAH4AQnEAfgBLdXEAfgBMAAAAAHNxAH4ATgBxAH4AH3VxAH4AUAAAAABzcgAUeHNidGkuYXBpLlByb2plY3Rpb27z0o1U6UWkLQIAAkwAAmlkcQB+AA1MAAZwcmVmaXh0ABZMeHNidGkvYXBpL1NpbXBsZVR5cGU7eHEAfgBcdAAEVW5pdHNyABN4c2J0aS5hcGkuU2luZ2xldG9u/Kdf+M9W5EYCAAFMAARwYXRodAAQTHhzYnRpL2FwaS9QYXRoO3hxAH4AXHNyAA54c2J0aS5hcGkuUGF0aJs9XAjOpSeEAgABWwAKY29tcG9uZW50c3QAGltMeHNidGkvYXBpL1BhdGhDb21wb25lbnQ7eHB1cgAaW0x4c2J0aS5hcGkuUGF0aENvbXBvbmVudDtD2gl0LWcWdAIAAHhwAAAAAnNyAAx4c2J0aS5hcGkuSWSYMmyLN1PEQAIAAUwAAmlkcQB+AA14cgAXeHNidGkuYXBpLlBhdGhDb21wb25lbnRfmiJbLoafvAIAAHhwdAAFc2NhbGFzcgAOeHNidGkuYXBpLlRoaXPbCe2mzFpAXAIAAHhxAH4AeHVyABpbTHhzYnRpLmFwaS5QYXJhbWV0ZXJMaXN0O/XTOh3ys3DuAgAAeHAAAAABc3IAF3hzYnRpLmFwaS5QYXJhbWV0ZXJMaXN01sW8HGRJdOMCAAJaAAppc0ltcGxpY2l0WwAKcGFyYW1ldGVyc3QAHFtMeHNidGkvYXBpL01ldGhvZFBhcmFtZXRlcjt4cAB1cgAcW0x4c2J0aS5hcGkuTWV0aG9kUGFyYW1ldGVyO8+4xV2l3bVtAgAAeHAAAAABc3IAGXhzYnRpLmFwaS5NZXRob2RQYXJhbWV0ZXIfRa4X00mw6gIABFoACmhhc0RlZmF1bHRMAAhtb2RpZmllcnQAHUx4c2J0aS9hcGkvUGFyYW1ldGVyTW9kaWZpZXI7TAAEbmFtZXEAfgANTAADdHBlcQB+AGV4cAB+cgAbeHNidGkuYXBpLlBhcmFtZXRlck1vZGlmaWVyAAAAAAAAAAASAAB4cQB+AFN0AAVQbGFpbnQABGFyZ3NzcgAXeHNidGkuYXBpLlBhcmFtZXRlcml6ZWQWbO5pA8m7fwIAAkwACGJhc2VUeXBlcQB+AGxbAA10eXBlQXJndW1lbnRzdAARW0x4c2J0aS9hcGkvVHlwZTt4cQB+AFxzcQB+AGt0AAVBcnJheXEAfgBxdXIAEVtMeHNidGkuYXBpLlR5cGU7dP+lWnv56UECAAB4cAAAAAFzcQB+AGt0AAZTdHJpbmdzcQB+AG9zcQB+AHJ1cQB+AHUAAAADc3EAfgB3dAAEamF2YXNxAH4Ad3QABGxhbmdxAH4AfHNxAH4AWHVxAH4APAAAAABzcQB+AFh1cQB+AJAAAAACc3EAfgBrdAAGT2JqZWN0cQB+AJRzcQB+AGt0AANBbnlxAH4AcXVyABRbTHhzYnRpLmFwaS5QYWNrYWdlO1sTGTdwpyehAgAAeHAAAAAAc3IAFXhzYnRpLmFwaS5Db21waWxhdGlvbu364MNq6KBCAgACSgAJc3RhcnRUaW1lWwAHb3V0cHV0c3QAGltMeHNidGkvYXBpL091dHB1dFNldHRpbmc7eHAAAAFb/oJmgHVyABpbTHhzYnRpLmFwaS5PdXRwdXRTZXR0aW5nO39qwvOnh6VCAgAAeHAAAAABc3IAF3hzYnRpLmFwaS5PdXRwdXRTZXR0aW5netmaR3T7HXsCAAJMAA9vdXRwdXREaXJlY3RvcnlxAH4ADUwAD3NvdXJjZURpcmVjdG9yeXEAfgANeHB0ADkvaG9tZS9rYXNpYS9zY2FsYUxlYXJuaW5nL0ZvcnVtL3RhcmdldC9zY2FsYS0yLjEyL2NsYXNzZXN0AAEvdXIAAltCrPMX+AYIVOACAAB4cAAAABR3J80gB9I/+fmQigknEPyB3F+FpQ==
+external apis:
+0 items
+source infos:
+2 items
+/home/kasia/scalaLearning/Forum/src/main/scala/DataBaseConnection.scala -> 
+AAAAAQAAAQAAABoAISAgICAgIGNhc2UgZSA9PiBlLnByaW50U3RhY2tUcmFjZQEAAANDAQAAAAsBAAsgICAgICAgICAgIAEARy9ob21lL2thc2lhL3NjYWxhTGVhcm5pbmcvRm9ydW0vc3JjL21haW4vc2NhbGEvRGF0YUJhc2VDb25uZWN0aW9uLnNjYWxhAQBHL2hvbWUva2FzaWEvc2NhbGFMZWFybmluZy9Gb3J1bS9zcmMvbWFpbi9zY2FsYS9EYXRhQmFzZUNvbm5lY3Rpb24uc2NhbGEAaFRoaXMgY2F0Y2hlcyBhbGwgVGhyb3dhYmxlcy4gSWYgdGhpcyBpcyByZWFsbHkgaW50ZW5kZWQsIHVzZSBgY2FzZSBlIDogVGhyb3dhYmxlYCB0byBjbGVhciB0aGlzIHdhcm5pbmcuAQAAAAA=
+/home/kasia/scalaLearning/Forum/src/main/scala/WebServer.scala -> 
+AAAAAAAAAAA=
+compilations:
+9 items
+0 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABW+MxZ+91cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAPC9ob21lL2thc2lhL3NjYWxhTGVhcm5pbmcvRm9ydW1TQlQvdGFyZ2V0L3NjYWxhLTIuMTIvY2xhc3Nlc3QAAS8=
+1 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABW+M3C6p1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAPC9ob21lL2thc2lhL3NjYWxhTGVhcm5pbmcvRm9ydW1TQlQvdGFyZ2V0L3NjYWxhLTIuMTIvY2xhc3Nlc3QAAS8=
+2 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABW+QAmVR1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAPC9ob21lL2thc2lhL3NjYWxhTGVhcm5pbmcvRm9ydW1TQlQvdGFyZ2V0L3NjYWxhLTIuMTIvY2xhc3Nlc3QAAS8=
+3 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABW+SlynV1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAPC9ob21lL2thc2lhL3NjYWxhTGVhcm5pbmcvRm9ydW1TQlQvdGFyZ2V0L3NjYWxhLTIuMTIvY2xhc3Nlc3QAAS8=
+4 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABW+ePQ5t1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAPC9ob21lL2thc2lhL3NjYWxhTGVhcm5pbmcvRm9ydW1TQlQvdGFyZ2V0L3NjYWxhLTIuMTIvY2xhc3Nlc3QAAS8=
+5 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABW+eWcUp1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAPC9ob21lL2thc2lhL3NjYWxhTGVhcm5pbmcvRm9ydW1TQlQvdGFyZ2V0L3NjYWxhLTIuMTIvY2xhc3Nlc3QAAS8=
+6 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABW/5nwvN1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAOS9ob21lL2thc2lhL3NjYWxhTGVhcm5pbmcvRm9ydW0vdGFyZ2V0L3NjYWxhLTIuMTIvY2xhc3Nlc3QAAS8=
+7 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABW/57VpR1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAOS9ob21lL2thc2lhL3NjYWxhTGVhcm5pbmcvRm9ydW0vdGFyZ2V0L3NjYWxhLTIuMTIvY2xhc3Nlc3QAAS8=
+8 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABW/6CZoB1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAOS9ob21lL2thc2lhL3NjYWxhTGVhcm5pbmcvRm9ydW0vdGFyZ2V0L3NjYWxhLTIuMTIvY2xhc3Nlc3QAAS8=
