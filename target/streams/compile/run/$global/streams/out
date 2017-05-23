@@ -1,5 +1,6 @@
-[0m[[0minfo[0m] [0mRunning DataBaseConnection [0m
+[0m[[0minfo[0m] [0mRunning SlickExample [0m
 [0m[[0mdebug[0m] [0mWaiting for threads to exit or System.exit to be called.[0m
+[0m[[0mdebug[0m] [0mWaiting for thread run-main-5 to terminate.[0m
 [0m[[0mdebug[0m] [0m  Classpath:[0m
 [0m[[0mdebug[0m] [0m	/home/kasia/scalaLearning/Forum/target/scala-2.12/classes[0m
 [0m[[0mdebug[0m] [0m	/home/kasia/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.2.jar[0m
@@ -72,8 +73,17 @@
 [0m[[0mdebug[0m] [0m	/home/kasia/.ivy2/cache/net.java.dev.jna/jna/jars/jna-4.1.0.jar[0m
 [0m[[0mdebug[0m] [0m	/home/kasia/.ivy2/cache/net.java.dev.jna/jna-platform/jars/jna-platform-4.1.0.jar[0m
 [0m[[0mdebug[0m] [0m	/home/kasia/.ivy2/cache/org.slf4j/slf4j-simple/jars/slf4j-simple-1.7.7.jar[0m
-[0m[[0mdebug[0m] [0mWaiting for thread run-main-0 to terminate.[0m
-[0m[[0mdebug[0m] [0m	Thread run-main-0 exited.[0m
+[0m[[0mdebug[0m] [0m	/home/kasia/.ivy2/cache/com.typesafe.slick/slick_2.12/bundles/slick_2.12-3.2.0.jar[0m
+[0m[[0mdebug[0m] [0m	/home/kasia/.ivy2/cache/com.typesafe.slick/slick-hikaricp_2.12/bundles/slick-hikaricp_2.12-3.2.0.jar[0m
+[0m[[0mdebug[0m] [0m	/home/kasia/.ivy2/cache/com.zaxxer/HikariCP/bundles/HikariCP-2.5.1.jar[0m
+[0m[[0mdebug[0m] [0m	/home/kasia/.ivy2/cache/org.slf4j/slf4j-nop/jars/slf4j-nop-1.7.23.jar[0m
+[0m[[0mdebug[0m] [0m	Thread run-main-5 exited.[0m
 [0m[[0mdebug[0m] [0mInterrupting remaining threads (should be all daemons).[0m
+[0m[[0mdebug[0m] [0mInterrupting thread mydb housekeeper[0m
+[0m[[0mdebug[0m] [0m	Interrupted mydb housekeeper[0m
+[0m[[0mdebug[0m] [0mInterrupting thread mydb connection adder[0m
+[0m[[0mdebug[0m] [0m	Interrupted mydb connection adder[0m
+[0m[[0mdebug[0m] [0mInterrupting thread mydb-1[0m
+[0m[[0mdebug[0m] [0m	Interrupted mydb-1[0m
 [0m[[0mdebug[0m] [0mSandboxed run complete..[0m
 [0m[[0mdebug[0m] [0mExited with code 0[0m
