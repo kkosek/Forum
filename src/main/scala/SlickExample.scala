@@ -5,7 +5,8 @@ import slick.jdbc.PostgresProfile.api._
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
 
-class Replies(tag: Tag) extends Table[(Int, Int, String, String, String)](tag, "REPLIES") {
+
+class Replies(tag: Tag) extends Table[(Int, Int, String, String, String)](tag, "replies") {
   def id = column[Int]("reply_id", O.PrimaryKey)
   def topicId = column[Int]("topic_id")
   def alias = column[String]("alias")
@@ -14,7 +15,7 @@ class Replies(tag: Tag) extends Table[(Int, Int, String, String, String)](tag, "
   def * = (id, topicId, alias, email, content)
 }
 
-class Topics(tag: Tag) extends Table[(Int, String, String, String, String, String)] (tag, "TOPICS") {
+class Topics(tag: Tag) extends Table[(Int, String, String, String, String, String)] (tag, "topics") {
   def id = column[Int]("topic_id", O.PrimaryKey)
   def alias = column[String]("alias")
   def email = column[String]("email")
@@ -35,6 +36,7 @@ object SlickExample {
     futureValue onComplete {
       case s => println(s)
     }
+    db.close
   }
 
 }
