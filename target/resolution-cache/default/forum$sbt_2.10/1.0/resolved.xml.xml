@@ -4,7 +4,7 @@
 		module="forum$sbt_2.10"
 		revision="1.0"
 		status="integration"
-		publication="20170531171225"
+		publication="20170531184326"
 	/>
 	<configurations>
 		<conf name="default" visibility="public"/>

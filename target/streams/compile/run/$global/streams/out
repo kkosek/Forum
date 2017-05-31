@@ -1,6 +1,5 @@
 [0m[[0minfo[0m] [0mRunning WebServer [0m
 [0m[[0mdebug[0m] [0mWaiting for threads to exit or System.exit to be called.[0m
-[0m[[0mdebug[0m] [0mWaiting for thread run-main-1 to terminate.[0m
 [0m[[0mdebug[0m] [0m  Classpath:[0m
 [0m[[0mdebug[0m] [0m	/home/kasia/scalaLearning/Forum/target/scala-2.12/classes[0m
 [0m[[0mdebug[0m] [0m	/home/kasia/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.2.jar[0m
@@ -73,17 +72,18 @@
 [0m[[0mdebug[0m] [0m	/home/kasia/.ivy2/cache/com.typesafe.akka/akka-http-xml_2.12/jars/akka-http-xml_2.12-10.0.7.jar[0m
 [0m[[0mdebug[0m] [0m	/home/kasia/.ivy2/cache/org.scala-lang.modules/scala-xml_2.12/bundles/scala-xml_2.12-1.0.6.jar[0m
 [0m[[0mdebug[0m] [0m	/home/kasia/.ivy2/cache/org.postgresql/postgresql/bundles/postgresql-42.1.1.jar[0m
-[0m[[0mdebug[0m] [0m	Thread run-main-1 exited.[0m
-[0m[[0mdebug[0m] [0mWaiting for thread my-system-akka.io.pinned-dispatcher-6 to terminate.[0m
-[0m[[0mdebug[0m] [0m	Thread my-system-akka.io.pinned-dispatcher-6 exited.[0m
-[0m[[0mdebug[0m] [0mWaiting for thread my-system-akka.actor.default-dispatcher-5 to terminate.[0m
-[0m[[0mdebug[0m] [0m	Thread my-system-akka.actor.default-dispatcher-5 exited.[0m
-[0m[[0mdebug[0m] [0mWaiting for thread my-system-akka.actor.default-dispatcher-7 to terminate.[0m
-[0m[[0mdebug[0m] [0m	Thread my-system-akka.actor.default-dispatcher-7 exited.[0m
+[0m[[0mdebug[0m] [0mWaiting for thread run-main-3 to terminate.[0m
+[0m[[0mdebug[0m] [0m	Thread run-main-3 exited.[0m
+[0m[[0mdebug[0m] [0mWaiting for thread my-system-akka.io.pinned-dispatcher-5 to terminate.[0m
+[0m[[0mdebug[0m] [0m	Thread my-system-akka.io.pinned-dispatcher-5 exited.[0m
+[0m[[0mdebug[0m] [0mWaiting for thread my-system-akka.actor.default-dispatcher-2 to terminate.[0m
+[0m[[0mdebug[0m] [0m	Thread my-system-akka.actor.default-dispatcher-2 exited.[0m
+[0m[[0mdebug[0m] [0mWaiting for thread my-system-akka.actor.default-dispatcher-8 to terminate.[0m
+[0m[[0mdebug[0m] [0m	Thread my-system-akka.actor.default-dispatcher-8 exited.[0m
 [0m[[0mdebug[0m] [0mInterrupting remaining threads (should be all daemons).[0m
-[0m[[0mdebug[0m] [0mInterrupting thread Thread-5[0m
-[0m[[0mdebug[0m] [0m	Interrupted Thread-5[0m
-[0m[[0mdebug[0m] [0mInterrupting thread scala-execution-context-global-176[0m
-[0m[[0mdebug[0m] [0m	Interrupted scala-execution-context-global-176[0m
+[0m[[0mdebug[0m] [0mInterrupting thread Thread-9[0m
+[0m[[0mdebug[0m] [0m	Interrupted Thread-9[0m
+[0m[[0mdebug[0m] [0mInterrupting thread scala-execution-context-global-152[0m
+[0m[[0mdebug[0m] [0m	Interrupted scala-execution-context-global-152[0m
 [0m[[0mdebug[0m] [0mSandboxed run complete..[0m
 [0m[[0mdebug[0m] [0mExited with code 0[0m

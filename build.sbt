@@ -32,7 +32,9 @@ libraryDependencies ++= Seq(
   "com.typesafe.akka" %% "akka-http-jackson" % "latest.integration",
   "com.typesafe.akka" %% "akka-http-xml" % "latest.integration",
   "io.spray" %% "spray-json" % "latest.integration",
-  "org.postgresql" % "postgresql" % "latest.integration"
+  "org.postgresql" % "postgresql" % "latest.integration",
+  "org.scalactic" %% "scalactic" % "latest.integration",
+  "org.scalatest" %% "scalatest" % "latest.integration" % "test"
 )
 
 

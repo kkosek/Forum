@@ -9,20 +9,10 @@ import spray.json._
 
 object WebServer extends {
   val db = Database.forConfig("mydb")
-  } with ForumDB with MyJSONSupport {
+  } with ServerRoute {
   def main(args: Array[String]) {
     implicit val system = ActorSystem("my-system")
     implicit val materializer = ActorMaterializer()
-
-    val route =
-      get {
-        path("topic" / "\\d+".r) { id =>
-          println("GET", id)
-          complete {
-            getById(id.toInt).toJson
-          }
-        }
-      }
 
     val bindingFuture = Http().bindAndHandle(route, "localhost", 8080)
 
@@ -34,4 +24,16 @@ object WebServer extends {
       .flatMap(_.unbind()) // trigger unbinding from the port
       .onComplete(_ => system.terminate()) // and shutdown when done
   }
+}
+
+trait ServerRoute extends ForumDB with MyJSONSupport {
+    val route =
+      get {
+        path("topic" / "\\d+".r) { id =>
+          println("GET", id)
+          complete {
+            getById(id.toInt).toJson
+          }
+        }
+      }
 }

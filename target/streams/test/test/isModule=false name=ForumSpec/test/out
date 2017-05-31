@@ -1,0 +1,5 @@
+[0m[[0minfo[0m] [0m[32mForumSpec:[0m[0m
+[0m[[0minfo[0m] [0m[31m- return topic example *** FAILED ***[0m[0m
+[0m[[0minfo[0m] [0m[31m  Could not unmarshal response to type 'Topic' for `responseAs` assertion: akka.http.scaladsl.unmarshalling.Unmarshaller$UnsupportedContentTypeException: Unsupported Content-Type, supported: application/json[0m[0m
+[0m[[0minfo[0m] [0m  [0m
+[0m[[0minfo[0m] [0m[31m  Response was: HttpResponse(500 Internal Server Error,List(),HttpEntity.Strict(text/plain; charset=UTF-8,There was an internal server error.),HttpProtocol(HTTP/1.1)) (RouteTest.scala:69)[0m[0m

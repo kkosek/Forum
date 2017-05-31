@@ -4,7 +4,7 @@
 		module="forum_2.12"
 		revision="1.0"
 		status="integration"
-		publication="20170527163542"
+		publication="20170531190906"
 	>
 		<description>
 		Forum
@@ -62,5 +62,7 @@
 		<dependency org="com.typesafe.akka" name="akka-http-xml_2.12" rev="latest.integration" conf="compile->default(compile)"/>
 		<dependency org="io.spray" name="spray-json_2.12" rev="latest.integration" conf="compile->default(compile)"/>
 		<dependency org="org.postgresql" name="postgresql" rev="latest.integration" conf="compile->default(compile)"/>
+		<dependency org="org.scalactic" name="scalactic_2.12" rev="latest.integration" conf="compile->default(compile)"/>
+		<dependency org="org.scalatest" name="scalatest_2.12" rev="latest.integration" conf="test->default(compile)"/>
 	</dependencies>
 </ivy-module>
