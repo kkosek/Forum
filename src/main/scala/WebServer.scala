@@ -1,31 +1,26 @@
 import akka.actor.ActorSystem
 import akka.http.scaladsl.Http
-import akka.http.scaladsl.model._
 import akka.http.scaladsl.server.Directives._
 import akka.stream.ActorMaterializer
-import akka.http.javadsl.server._
+import scala.concurrent.ExecutionContext.Implicits.global
+import slick.jdbc.H2Profile.api.Database
 import scala.io.StdIn
+import spray.json._
 
-object WebServer {
+object WebServer extends {
+  val db = Database.forConfig("mydb")
+  } with ForumDB with MyJSONSupport {
   def main(args: Array[String]) {
-
-    final case class Reply(topicId: Int, replyId: Int, alias: String, email: String, content: String)
-    final case class Topic(topicId: Int, topic: String, email: String, alias: String,
-                           content: String, secret: String, replies: Array[Reply])
-
-
     implicit val system = ActorSystem("my-system")
     implicit val materializer = ActorMaterializer()
-    implicit val executionContext = system.dispatcher
 
     val route =
       get {
         path("topic" / "\\d+".r) { id =>
           println("GET", id)
-          val requestedTopic = ???
-
-
-          complete(HttpEntity(ContentTypes.`text/html(UTF-8)`, "<h1>Say hello to akka-http" + id + "</h1>"))
+          complete {
+            getById(id.toInt).toJson
+          }
         }
       }
 
@@ -33,6 +28,8 @@ object WebServer {
 
     println(s"Server online at http://localhost:8080/\nPress RETURN to stop...")
     StdIn.readLine() // let it run until user presses return
+
+    db.close
     bindingFuture
       .flatMap(_.unbind()) // trigger unbinding from the port
       .onComplete(_ => system.terminate()) // and shutdown when done
