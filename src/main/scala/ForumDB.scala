@@ -6,16 +6,17 @@ import slick.jdbc.PostgresProfile.api._
 trait ForumDB extends DataBaseScheme {
   def db: Database
 
-  def getById(id: Int) = {
+  def getTopicWithReplies(id: Int): TopicWithReplies = {
     val topics = TableQuery[TopicsTable]
     val replies = TableQuery[RepliesTable]
     val query = for {
       t <- topics if t.id === id
-      r <- replies if r.topicId === t.id
-    } yield (t)
+      r <- replies if r.topicId === id
+    } yield(t, r)
     val futureResult = db.run(query.result)
     val finalResult = Await.result(futureResult, Duration.Inf)
-    finalResult.head
+    val res = finalResult.toList.unzip
+    TopicWithReplies(res._1.head, res._2)
   }
 }
 

@@ -5,7 +5,7 @@ import akka.stream.ActorMaterializer
 import scala.concurrent.ExecutionContext.Implicits.global
 import slick.jdbc.H2Profile.api.Database
 import scala.io.StdIn
-import spray.json._
+import scala.language.implicitConversions
 
 object WebServer extends {
   val db = Database.forConfig("mydb")
@@ -26,13 +26,14 @@ object WebServer extends {
   }
 }
 
-trait ServerRoute extends ForumDB with MyJSONSupport {
+
+trait ServerRoute extends ForumDB with JSONFormats {
     val route =
       get {
         path("topic" / "\\d+".r) { id =>
           println("GET", id)
           complete {
-            getById(id.toInt).toJson
+            getTopicWithReplies(id.toInt)
           }
         }
       }

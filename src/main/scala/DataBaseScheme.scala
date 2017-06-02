@@ -3,6 +3,7 @@ import slick.jdbc.PostgresProfile.api._
 
 final case class Topic(id: Int, alias: String, email: String, content: String, topic: String, secret: String)
 final case class Reply(id: Int, topicId: Int, alias: String, email: String, content: String)
+final case class TopicWithReplies(topic: Topic, replies: List[Reply])
 
 trait DataBaseScheme {
 

@@ -2,67 +2,34 @@
 <project version="4">
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/build.sbt" line="34" />
-    <bookmark url="file://$PROJECT_DIR$/src/main/scala/ForumDB.scala" line="22" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/scala/ForumDB.scala" line="23" />
     <bookmark url="file://$PROJECT_DIR$/build.sbt" line="7" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/scala/WebServer.scala" line="35" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0dde0811-67a3-43d2-b0f8-1b061fa63938" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/scala/ForumSpec.scala" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$a24bc813a3d32b525def$$anonfun$$sbtdef$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$a24bc813a3d32b525def$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$a24bc813a3d32b525def.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$a24bc813a3d32b525def.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/resolution-cache/default/forum-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/resolution-cache/default/forum-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-forum-build-compile-internal.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-forum-build-compile.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-forum-build-docs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-forum-build-optional.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-forum-build-plugin.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-forum-build-pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-forum-build-provided.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-forum-build-runtime-internal.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-forum-build-runtime.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-forum-build-scala-tool.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-forum-build-sources.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-forum-build-test-internal.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-forum-build-test.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/resolution-cache/default/forum_2.12/1.0/resolved.xml.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/resolution-cache/default/forum_2.12/1.0/resolved.xml.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-forum_2.12-compile-internal.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-forum_2.12-compile.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-forum_2.12-docs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-forum_2.12-optional.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-forum_2.12-plugin.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-forum_2.12-pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-forum_2.12-provided.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-forum_2.12-runtime-internal.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-forum_2.12-runtime.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-forum_2.12-scala-tool.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-forum_2.12-sources.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-forum_2.12-test-internal.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-forum_2.12-test.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.10/input_dsp" afterPath="$PROJECT_DIR$/project/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.10/input_dsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.10/output_dsp" afterPath="$PROJECT_DIR$/project/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.10/output_dsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/DataBaseScheme$RepliesTable.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/DataBaseScheme$RepliesTable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/DataBaseScheme$TopicsTable.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/DataBaseScheme$TopicsTable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/DataBaseScheme.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/DataBaseScheme.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/MyJSONSupport.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/MyJSONSupport.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/Reply$.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/Reply$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/Reply.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/Reply.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/Topic$.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/Topic$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/Topic.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/Topic.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/WebServer$.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/WebServer$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/WebServer.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/WebServer.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_scalatest_scalatest_2_12_3_2_0_SNAP6_jar.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$0468f60c73b5fcfebd8c$$anonfun$$sbtdef$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$0468f60c73b5fcfebd8c$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$0468f60c73b5fcfebd8c.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$0468f60c73b5fcfebd8c.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$08a5a3188e6bac8164b6$$anonfun$$sbtdef$1$$anonfun$apply$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$08a5a3188e6bac8164b6$$anonfun$$sbtdef$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$08a5a3188e6bac8164b6$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$08a5a3188e6bac8164b6.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$08a5a3188e6bac8164b6.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$fe28469ad88d7389e273$$anonfun$$sbtdef$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$fe28469ad88d7389e273$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$fe28469ad88d7389e273.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$fe28469ad88d7389e273.class" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/SBT__org_scalactic_scalactic_2_12_3_0_0_jar.xml" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_scalactic_scalactic_2_12_3_2_0_SNAP6_jar.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" afterPath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/output" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/forum.iml" afterPath="$PROJECT_DIR$/.idea/modules/forum.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.sbt" afterPath="$PROJECT_DIR$/build.sbt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/plugins.sbt" afterPath="$PROJECT_DIR$/project/plugins.sbt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/$global/ivyConfiguration/$global/streams/out" afterPath="$PROJECT_DIR$/project/target/streams/$global/ivyConfiguration/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/compile/compileIncremental/$global/streams/out" afterPath="$PROJECT_DIR$/project/target/streams/compile/compileIncremental/$global/streams/out" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/compile/copyResources/$global/streams/out" afterPath="$PROJECT_DIR$/project/target/streams/compile/copyResources/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/DataBaseScheme.scala" afterPath="$PROJECT_DIR$/src/main/scala/DataBaseScheme.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/ForumDB.scala" afterPath="$PROJECT_DIR$/src/main/scala/ForumDB.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/JSONActions.scala" afterPath="$PROJECT_DIR$/src/main/scala/JSONActions.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/WebServer.scala" afterPath="$PROJECT_DIR$/src/main/scala/WebServer.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/.history" afterPath="$PROJECT_DIR$/target/.history" />
@@ -88,12 +55,17 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-forum$sources_2.12-test-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-forum$sources_2.12-test-internal.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-forum$sources_2.12-test.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-forum$sources_2.12-test.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/ivyConfiguration/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/ivyConfiguration/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/updateSbtClassifiers/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/updateSbtClassifiers/$global/streams/out" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/out" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.12" afterPath="$PROJECT_DIR$/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.12" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/run/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/compile/run/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/runtime/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/runtime/externalDependencyClasspath/$global/streams/export" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/runtime/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/runtime/managedClasspath/$global/streams/export" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/compileIncremental/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/test/compileIncremental/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/definedTests/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/test/definedTests/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/test/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/test/test/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/test/$global/streams/succeeded_tests" afterPath="$PROJECT_DIR$/target/streams/test/test/$global/streams/succeeded_tests" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-reports/ForumSpec.xml" afterPath="$PROJECT_DIR$/target/test-reports/ForumSpec.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -130,8 +102,8 @@
       <file leaf-file-name="ForumDB.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/ForumDB.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state relative-caret-position="285">
+              <caret line="19" column="2" lean-forward="false" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
@@ -139,25 +111,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WebServer.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="WebServer.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/WebServer.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+            <state relative-caret-position="300">
+              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ForumSpec.scala" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/scala/ForumSpec.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="28" lean-forward="false" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -166,8 +126,8 @@
       <file leaf-file-name="JSONActions.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/JSONActions.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="5" column="52" lean-forward="false" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="52" />
+            <state relative-caret-position="75">
+              <caret line="6" column="72" lean-forward="false" selection-start-line="6" selection-start-column="72" selection-end-line="6" selection-end-column="72" />
               <folding />
             </state>
           </provider>
@@ -176,8 +136,8 @@
       <file leaf-file-name="DataBaseScheme.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/DataBaseScheme.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state relative-caret-position="60">
+              <caret line="4" column="57" lean-forward="false" selection-start-line="4" selection-start-column="57" selection-end-line="4" selection-end-column="57" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -210,13 +170,13 @@
         <option value="$PROJECT_DIR$/src/main/scala/DataBaseConnection.scala" />
         <option value="$PROJECT_DIR$/src/main/resources/application.conf" />
         <option value="$PROJECT_DIR$/src/main/scala/SlickExample.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/DataBaseScheme.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/ForumDB.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/JSONActions.scala" />
         <option value="$PROJECT_DIR$/build.sbt" />
         <option value="$PROJECT_DIR$/project/plugins.sbt" />
-        <option value="$PROJECT_DIR$/src/main/scala/WebServer.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/ForumSpec.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/DataBaseScheme.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/JSONActions.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/WebServer.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/ForumDB.scala" />
       </list>
     </option>
   </component>
@@ -243,8 +203,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -281,72 +239,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Forum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Forum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scala" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Forum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Forum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scala" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JSONActions.scala" />
-              <option name="myItemType" value="org.jetbrains.plugins.scala.components.ScalaDefsProjectViewProvider$ScalaFileTreeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Forum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Forum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="project" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -371,6 +263,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -737,7 +631,7 @@
     </recent_temporary>
   </component>
   <component name="SbtLocalSettings">
-    <option name="lastUpdateTimestamp" value="1496249014596" />
+    <option name="lastUpdateTimestamp" value="1496401555155" />
     <option name="availableProjects">
       <map>
         <entry>
@@ -790,12 +684,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-29" width="1366" height="797" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3138021" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="SBT" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -807,7 +700,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34360555" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23279649" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23279649" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -818,6 +711,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3138021" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3203125" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32973805" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1146,16 +1040,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/ForumDB.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.sbt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
@@ -1168,44 +1052,53 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/DataBaseScheme.scala">
+    <entry file="file://$PROJECT_DIR$/src/test/scala/ForumSpec.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="180">
+          <caret line="12" column="6" lean-forward="false" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
           <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/WebServer.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/JSONActions.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="52" lean-forward="false" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="52" />
+        <state relative-caret-position="75">
+          <caret line="6" column="72" lean-forward="false" selection-start-line="6" selection-start-column="72" selection-end-line="6" selection-end-column="72" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/ForumSpec.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/DataBaseScheme.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="28" lean-forward="false" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+        <state relative-caret-position="60">
+          <caret line="4" column="57" lean-forward="false" selection-start-line="4" selection-start-column="57" selection-end-line="4" selection-end-column="57" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/ForumDB.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="2" lean-forward="false" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/WebServer.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
