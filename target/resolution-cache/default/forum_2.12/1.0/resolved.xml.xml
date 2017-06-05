@@ -4,7 +4,7 @@
 		module="forum_2.12"
 		revision="1.0"
 		status="integration"
-		publication="20170531190906"
+		publication="20170605210031"
 	>
 		<description>
 		Forum
@@ -64,5 +64,6 @@
 		<dependency org="org.postgresql" name="postgresql" rev="latest.integration" conf="compile->default(compile)"/>
 		<dependency org="org.scalactic" name="scalactic_2.12" rev="latest.integration" conf="compile->default(compile)"/>
 		<dependency org="org.scalatest" name="scalatest_2.12" rev="latest.integration" conf="test->default(compile)"/>
+		<dependency org="com.github.nscala-time" name="nscala-time_2.12" rev="2.16.0" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>

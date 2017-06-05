@@ -34,7 +34,8 @@ libraryDependencies ++= Seq(
   "io.spray" %% "spray-json" % "latest.integration",
   "org.postgresql" % "postgresql" % "latest.integration",
   "org.scalactic" %% "scalactic" % "latest.integration",
-  "org.scalatest" %% "scalatest" % "latest.integration" % "test"
+  "org.scalatest" %% "scalatest" % "latest.integration" % "test",
+  "com.github.nscala-time" %% "nscala-time" % "2.16.0"
 )
 
 

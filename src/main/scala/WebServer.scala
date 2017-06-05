@@ -6,6 +6,7 @@ import scala.concurrent.ExecutionContext.Implicits.global
 import slick.jdbc.H2Profile.api.Database
 import scala.io.StdIn
 import scala.language.implicitConversions
+import akka.http.scaladsl.unmarshalling.FromEntityUnmarshaller
 
 object WebServer extends {
   val db = Database.forConfig("mydb")
@@ -29,12 +30,22 @@ object WebServer extends {
 
 trait ServerRoute extends ForumDB with JSONFormats {
     val route =
-      get {
-        path("topic" / "\\d+".r) { id =>
+      path("topic" / "\\d+".r) { id =>
+        get {
           println("GET", id)
           complete {
             getTopicWithReplies(id.toInt)
           }
         }
+      } ~
+      path("add-topic") {
+        post {
+          entity(as[Topic]) { topic =>
+            addTopic(topic)
+            complete("This is post")
+          }
+        }
       }
+
+
 }

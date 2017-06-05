@@ -72,20 +72,7 @@
 [0m[[0mdebug[0m] [0m	/home/kasia/.ivy2/cache/com.typesafe.akka/akka-http-xml_2.12/jars/akka-http-xml_2.12-10.0.7.jar[0m
 [0m[[0mdebug[0m] [0m	/home/kasia/.ivy2/cache/org.scala-lang.modules/scala-xml_2.12/bundles/scala-xml_2.12-1.0.6.jar[0m
 [0m[[0mdebug[0m] [0m	/home/kasia/.ivy2/cache/org.postgresql/postgresql/bundles/postgresql-42.1.1.jar[0m
+[0m[[0mdebug[0m] [0m	/home/kasia/.ivy2/cache/com.github.nscala-time/nscala-time_2.12/jars/nscala-time_2.12-2.16.0.jar[0m
+[0m[[0mdebug[0m] [0m	/home/kasia/.ivy2/cache/joda-time/joda-time/jars/joda-time-2.9.7.jar[0m
+[0m[[0mdebug[0m] [0m	/home/kasia/.ivy2/cache/org.joda/joda-convert/jars/joda-convert-1.2.jar[0m
 [0m[[0mdebug[0m] [0mWaiting for thread run-main-0 to terminate.[0m
-[0m[[0mdebug[0m] [0m	Thread run-main-0 exited.[0m
-[0m[[0mdebug[0m] [0mWaiting for thread my-system-scheduler-1 to terminate.[0m
-[0m[[0mdebug[0m] [0m	Thread my-system-scheduler-1 exited.[0m
-[0m[[0mdebug[0m] [0mWaiting for thread my-system-akka.actor.default-dispatcher-3 to terminate.[0m
-[0m[[0mdebug[0m] [0m	Thread my-system-akka.actor.default-dispatcher-3 exited.[0m
-[0m[[0mdebug[0m] [0mWaiting for thread my-system-akka.actor.default-dispatcher-10 to terminate.[0m
-[0m[[0mdebug[0m] [0m	Thread my-system-akka.actor.default-dispatcher-10 exited.[0m
-[0m[[0mdebug[0m] [0mInterrupting remaining threads (should be all daemons).[0m
-[0m[[0mdebug[0m] [0mInterrupting thread scala-execution-context-global-56[0m
-[0m[[0mdebug[0m] [0m	Interrupted scala-execution-context-global-56[0m
-[0m[[0mdebug[0m] [0mInterrupting thread Thread-3[0m
-[0m[[0mdebug[0m] [0m	Interrupted Thread-3[0m
-[0m[[0mdebug[0m] [0mInterrupting thread Thread-1[0m
-[0m[[0mdebug[0m] [0m	Interrupted Thread-1[0m
-[0m[[0mdebug[0m] [0mSandboxed run complete..[0m
-[0m[[0mdebug[0m] [0mExited with code 0[0m
