@@ -6,7 +6,6 @@ import scala.concurrent.ExecutionContext.Implicits.global
 import slick.jdbc.H2Profile.api.Database
 import scala.io.StdIn
 import scala.language.implicitConversions
-import akka.http.scaladsl.unmarshalling.FromEntityUnmarshaller
 
 object WebServer extends {
   val db = Database.forConfig("mydb")

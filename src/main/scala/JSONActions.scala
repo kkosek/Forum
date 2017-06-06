@@ -1,20 +1,40 @@
 import akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport
 import spray.json._
 import java.sql.Timestamp
+import scala.language.implicitConversions
+import java.util.Date
 
 trait JSONFormats extends SprayJsonSupport with DefaultJsonProtocol {
-  import MyJsonProtocol.TimestampJSONConversion._
+  implicit val timestampFormat: JsonFormat[Timestamp] = jsonFormat[Timestamp](TimestampReader, TimestampWriter)
   implicit val topicFormat = jsonFormat7(Topic.apply)
   implicit val replyFormat = jsonFormat5(Reply.apply)
   implicit val topicWithReplyFormat = jsonFormat2(TopicWithReplies.apply)
 }
 
-object MyJsonProtocol extends DefaultJsonProtocol {
-  implicit object TimestampJSONConversion extends RootJsonFormat[Timestamp] {
-    def write(timestamp: Timestamp): JsValue = JsNumber("5")
-    def read(json: JsValue): Timestamp = json match {
-      case JsNumber(time) => new Timestamp(3452121)
-      case _ => throw new DeserializationException("Wrong date format.")
+object TimestampReader extends RootJsonReader[Timestamp] {
+  implicit def dateToTimestamp(date: Date) = {
+    new Timestamp(date.getTime)
+  }
+  //FIXME
+    def read(json: JsValue): Timestamp = {
+      println("Reader working ...")
+      json match {
+        case time: JsString => {
+          new java.util.Date
+        }
+        case _ => {
+          println("JSON error")
+          throw DeserializationException("Wrong date format.")
+        }
+      }
     }
+}
+
+object TimestampWriter extends RootJsonWriter[Timestamp] {
+  def write(timestamp: Timestamp): JsValue = {
+    JsObject(
+      "timestamp" -> JsString(timestamp.toString)
+    )
   }
 }
+

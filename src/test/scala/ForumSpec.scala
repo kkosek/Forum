@@ -1,3 +1,5 @@
+import java.sql.Timestamp
+
 import org.scalatest.{Matchers, WordSpec}
 import org.scalatest.Inside._
 import akka.http.scaladsl.testkit.ScalatestRouteTest

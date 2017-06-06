@@ -1,8 +1,10 @@
 import slick.lifted.Tag
 import slick.jdbc.PostgresProfile.api._
 import java.sql.Timestamp
+
 import org.joda.time.DateTime
 import org.joda.time.DateTimeZone.UTC
+import slick.sql.SqlProfile.ColumnOption.SqlType
 
 
 final case class Topic(id: Int, alias: String, email: String, content: String, topic: String, secret: Int, timestamp: Timestamp)
