@@ -77,14 +77,14 @@
 [0m[[0mdebug[0m] [0m	/home/kasia/.ivy2/cache/org.joda/joda-convert/jars/joda-convert-1.2.jar[0m
 [0m[[0mdebug[0m] [0mWaiting for thread run-main-0 to terminate.[0m
 [0m[[0mdebug[0m] [0m	Thread run-main-0 exited.[0m
-[0m[[0mdebug[0m] [0mWaiting for thread my-system-akka.actor.default-dispatcher-3 to terminate.[0m
-[0m[[0mdebug[0m] [0m	Thread my-system-akka.actor.default-dispatcher-3 exited.[0m
+[0m[[0mdebug[0m] [0mWaiting for thread my-system-akka.actor.default-dispatcher-2 to terminate.[0m
+[0m[[0mdebug[0m] [0m	Thread my-system-akka.actor.default-dispatcher-2 exited.[0m
 [0m[[0mdebug[0m] [0mInterrupting remaining threads (should be all daemons).[0m
-[0m[[0mdebug[0m] [0mInterrupting thread Thread-9[0m
-[0m[[0mdebug[0m] [0m	Interrupted Thread-9[0m
-[0m[[0mdebug[0m] [0mInterrupting thread scala-execution-context-global-92[0m
-[0m[[0mdebug[0m] [0m	Interrupted scala-execution-context-global-92[0m
-[0m[[0mdebug[0m] [0mInterrupting thread scala-execution-context-global-93[0m
-[0m[[0mdebug[0m] [0m	Interrupted scala-execution-context-global-93[0m
+[0m[[0mdebug[0m] [0mInterrupting thread scala-execution-context-global-47[0m
+[0m[[0mdebug[0m] [0m	Interrupted scala-execution-context-global-47[0m
+[0m[[0mdebug[0m] [0mInterrupting thread Thread-1[0m
+[0m[[0mdebug[0m] [0m	Interrupted Thread-1[0m
+[0m[[0mdebug[0m] [0mInterrupting thread Thread-3[0m
+[0m[[0mdebug[0m] [0m	Interrupted Thread-3[0m
 [0m[[0mdebug[0m] [0mSandboxed run complete..[0m
 [0m[[0mdebug[0m] [0mExited with code 0[0m

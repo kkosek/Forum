@@ -41,18 +41,18 @@ class ForumSpec extends {
       }
     }
     "add new topic when json posted on /add-topic" in {
-      Post("/add-topic", HttpEntity(ContentTypes.`application/json`, """{"secret": 121212, "email": "email@email.com", "alias": "andrzej", "id": 3, "content": "Problem", "topic": "Temat", "timestamp": "2017-06-02 13:13:13"}""")) ~> route ~> check {
+      Post("/add-topic", HttpEntity(ContentTypes.`application/json`, """{"secret": 4, "email": "email@email.com", "alias": "andrzej", "id": 4, "content": "Problem", "topic": "Temat", "timestamp": "2017-06-02 13:13:13"}""")) ~> route ~> check {
         status shouldBe OK
         responseAs[String] shouldEqual "This is post"
       }
     }
     "add reply to topic when json posted on /reply-topic" in {
-      Post("/reply/1", HttpEntity(ContentTypes.`application/json`, """{"id": 12, "topicId": 3, "alias": "bukiet", "email": "bukiet@onet.pl", "content": "Dont worry", "timestamp": "0"}""")) ~> route ~> check {
+      Post("/reply/1", HttpEntity(ContentTypes.`application/json`, """{"id": 12, "topicId": 4, "alias": "bukiet", "email": "bukiet@onet.pl", "content": "Dont worry", "timestamp": "0"}""")) ~> route ~> check {
         status shouldBe OK
       }
     }
     "remove topic and its replies from database" in {
-      Post("/delete/3") ~> route ~> check {
+      Post("/delete/4", HttpEntity(ContentTypes.`application/json`, """{"secret": 4}""")) ~> route ~> check {
         status shouldBe OK
       }
     }

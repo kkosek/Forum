@@ -2,6 +2,7 @@ import scala.concurrent.{Await, Future}
 import scala.concurrent.duration.Duration
 import slick.jdbc.H2Profile.api.Database
 import slick.jdbc.PostgresProfile.api._
+import scala.concurrent.ExecutionContext.Implicits.global
 
 import scala.util.Random
 
@@ -22,23 +23,23 @@ trait ForumDB extends DataBaseScheme {
   def addTopic(topic: Topic) = {
     val insert = topics += topic
     val result = db.run(insert)
-    val rowCount = Await.result(result, Duration.Inf)
-    println("Added " + rowCount + " rows to topics table.")
   }
 
   def addReply(reply: Reply) = {
     val insert = replies += reply
     val result = db.run(insert)
-    val rowCount = Await.result(result, Duration.Inf)
-    println("Added " + rowCount + " rows to replies table.")
   }
 
   def deleteTopic(id: Long, secret: Secret) = {
-    val removeTopics = topics.filter(_.id === id).delete
-    val removeReplies = replies.filter(_.topicId === id).delete
-    val result: Future[Int] = db.run(removeTopics andThen removeReplies)
-    val affectedRows = Await.result(result, Duration.Inf)
-    println("Deleted rows: " + affectedRows)
+    val exists: DBIO[Boolean] = topics.filter(x => x.secret === secret.secret).filter(x => x.id === id).exists.result
+    val query = exists.flatMap {
+      case true => {
+        topics.filter(_.id === id).delete andThen
+        replies.filter(_.topicId === id).delete
+      }
+      case false => DBIO.failed(new RuntimeException("There is no topic with such id and secret."))
+    }
+    db.run(query)
   }
 
 

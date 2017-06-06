@@ -10,7 +10,7 @@ import slick.sql.SqlProfile.ColumnOption.SqlType
 final case class Topic(id: Long, alias: String, email: String, content: String, topic: String, secret: Long, timestamp: Timestamp)
 final case class Reply(id: Long, topicId: Long, alias: String, email: String, content: String, timestamp: Timestamp)
 final case class TopicWithReplies(topic: Topic, replies: List[Reply])
-final case class Secret(secret: String)
+final case class Secret(secret: Long)
 
 trait DataBaseScheme {
   class RepliesTable(tag: Tag) extends Table[Reply](tag, "replies") {

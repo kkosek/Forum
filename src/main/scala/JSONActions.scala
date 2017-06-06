@@ -33,9 +33,7 @@ object TimestampReader extends RootJsonReader[Timestamp] {
 
 object TimestampWriter extends RootJsonWriter[Timestamp] {
   def write(timestamp: Timestamp): JsValue = {
-    JsObject(
-      "timestamp" -> JsString(timestamp.toString)
-    )
+      JsString(timestamp.toString)
   }
 }
 
