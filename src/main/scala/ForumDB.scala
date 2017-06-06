@@ -4,10 +4,11 @@ import slick.jdbc.H2Profile.api.Database
 import slick.jdbc.PostgresProfile.api._
 import scala.concurrent.ExecutionContext.Implicits.global
 
-import scala.util.Random
 
 trait ForumDB extends DataBaseScheme {
+  import DataConversion._
   def db: Database
+
 
   def getTopicWithReplies(id: Long): TopicWithReplies = {
     val query = for {
@@ -37,11 +38,25 @@ trait ForumDB extends DataBaseScheme {
         topics.filter(_.id === id).delete andThen
         replies.filter(_.topicId === id).delete
       }
-      case false => DBIO.failed(new RuntimeException("There is no topic with such id and secret."))
+      case false =>
+        DBIO.failed(new RuntimeException("There is no topic with such id and secret."))
     }
     db.run(query)
   }
 
+  def updateTopic(topicEdition: TopicEdition) = {
+    val exists: DBIO[Boolean] = topics.filter(x => x.secret === topicEdition.secret).filter(x => x.id === topicEdition.id).exists.result
+    val query = exists.flatMap {
+      case true => {
+        topics.filter(_.id === topicEdition.id)
+          .map(topic => (topic.content, topic.timestamp))
+          .update((topicEdition.content, new java.util.Date))
+      }
+      case false =>
+        DBIO.failed(new RuntimeException("There is no topic with such id and secret."))
+    }
+    db.run(query)
+  }
 
 }
 

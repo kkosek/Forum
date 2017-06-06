@@ -40,6 +40,11 @@ class ForumSpec extends {
         }
       }
     }
+    "remove topic and its replies from database" in {
+      Post("/delete/4", HttpEntity(ContentTypes.`application/json`, """{"secret": 4}""")) ~> route ~> check {
+        status shouldBe OK
+      }
+    }
     "add new topic when json posted on /add-topic" in {
       Post("/add-topic", HttpEntity(ContentTypes.`application/json`, """{"secret": 4, "email": "email@email.com", "alias": "andrzej", "id": 4, "content": "Problem", "topic": "Temat", "timestamp": "2017-06-02 13:13:13"}""")) ~> route ~> check {
         status shouldBe OK
@@ -51,8 +56,8 @@ class ForumSpec extends {
         status shouldBe OK
       }
     }
-    "remove topic and its replies from database" in {
-      Post("/delete/4", HttpEntity(ContentTypes.`application/json`, """{"secret": 4}""")) ~> route ~> check {
+    "update row in database" in {
+      Post("/edit", HttpEntity(ContentTypes.`application/json`, """{"id": 4, "secret": 4, "content": "Don't worry!"}""")) ~> route ~> check {
         status shouldBe OK
       }
     }

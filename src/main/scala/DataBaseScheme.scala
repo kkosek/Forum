@@ -1,15 +1,12 @@
 import slick.lifted.Tag
 import slick.jdbc.PostgresProfile.api._
 import java.sql.Timestamp
-
-import org.joda.time.DateTime
-import org.joda.time.DateTimeZone.UTC
-import slick.sql.SqlProfile.ColumnOption.SqlType
-
+import java.util.Date
 
 final case class Topic(id: Long, alias: String, email: String, content: String, topic: String, secret: Long, timestamp: Timestamp)
 final case class Reply(id: Long, topicId: Long, alias: String, email: String, content: String, timestamp: Timestamp)
 final case class TopicWithReplies(topic: Topic, replies: List[Reply])
+final case class TopicEdition(id: Long, secret: Long, content: String)
 final case class Secret(secret: Long)
 
 trait DataBaseScheme {
@@ -35,5 +32,8 @@ trait DataBaseScheme {
     def * = (id, alias, email, content, topic, secret, timestamp) <> (Topic.tupled, Topic.unapply)
   }
   val topics = TableQuery[TopicsTable]
+}
 
+object DataConversion {
+  implicit def dateToTimestamp(date: Date): Timestamp = new Timestamp(date.getTime)
 }

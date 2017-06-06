@@ -4,7 +4,6 @@ trait ServerRoute extends ForumDB with JSONFormats {
     val route =
       path("topic" / "\\d+".r) { id =>
         get {
-          println("GET", id)
           complete {
             getTopicWithReplies(id.toLong)
           }
@@ -30,6 +29,14 @@ trait ServerRoute extends ForumDB with JSONFormats {
         post {
           entity(as[Secret]) { secret =>
             deleteTopic(id.toLong, secret)
+            complete("sth")
+          }
+        }
+      } ~
+      path("edit") {
+        post {
+          entity(as[TopicEdition]) { topicEdition =>
+            updateTopic(topicEdition)
             complete("sth")
           }
         }

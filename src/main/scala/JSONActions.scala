@@ -8,32 +8,22 @@ trait JSONFormats extends SprayJsonSupport with DefaultJsonProtocol {
   implicit val timestampFormat: JsonFormat[Timestamp] = jsonFormat[Timestamp](TimestampReader, TimestampWriter)
   implicit val topicFormat = jsonFormat7(Topic.apply)
   implicit val replyFormat = jsonFormat6(Reply.apply)
-  implicit val secretFormat = jsonFormat1(Secret.apply)
+  implicit val secretFormat = jsonFormat1(Secret.apply) //FIXME
   implicit val topicWithReplyFormat = jsonFormat2(TopicWithReplies.apply)
+  implicit val topicEditionFormat = jsonFormat3(TopicEdition.apply)
 }
 
 object TimestampReader extends RootJsonReader[Timestamp] {
-  implicit def dateToTimestamp(date: Date) = {
-    new Timestamp(date.getTime)
-  }
-  //FIXME
+  import DataConversion._
     def read(json: JsValue): Timestamp = {
-      println("Reader working ...")
       json match {
-        case time: JsValue => {
-          new java.util.Date
-        }
-        case _ => {
-          println("JSON error")
-          throw DeserializationException("Wrong date format.")
-        }
+        case time: JsValue => new java.util.Date
+        case _ => throw DeserializationException("Wrong date format.")
       }
     }
 }
 
 object TimestampWriter extends RootJsonWriter[Timestamp] {
-  def write(timestamp: Timestamp): JsValue = {
-      JsString(timestamp.toString)
-  }
+  def write(timestamp: Timestamp): JsValue = JsString(timestamp.toString)
 }
 
