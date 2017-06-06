@@ -28,8 +28,10 @@ trait ServerRoute extends ForumDB with JSONFormats {
       } ~
       path("delete" / "\\d+".r) { id =>
         post {
-          deleteTopic(id.toLong)
-          complete("sth")
+          entity(as[Secret]) { secret =>
+            deleteTopic(id.toLong, secret)
+            complete("sth")
+          }
         }
       }
 

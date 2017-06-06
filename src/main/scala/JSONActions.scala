@@ -8,6 +8,7 @@ trait JSONFormats extends SprayJsonSupport with DefaultJsonProtocol {
   implicit val timestampFormat: JsonFormat[Timestamp] = jsonFormat[Timestamp](TimestampReader, TimestampWriter)
   implicit val topicFormat = jsonFormat7(Topic.apply)
   implicit val replyFormat = jsonFormat6(Reply.apply)
+  implicit val secretFormat = jsonFormat1(Secret.apply)
   implicit val topicWithReplyFormat = jsonFormat2(TopicWithReplies.apply)
 }
 

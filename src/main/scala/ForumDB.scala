@@ -33,7 +33,7 @@ trait ForumDB extends DataBaseScheme {
     println("Added " + rowCount + " rows to replies table.")
   }
 
-  def deleteTopic(id: Long) = {
+  def deleteTopic(id: Long, secret: Secret) = {
     val removeTopics = topics.filter(_.id === id).delete
     val removeReplies = replies.filter(_.topicId === id).delete
     val result: Future[Int] = db.run(removeTopics andThen removeReplies)
