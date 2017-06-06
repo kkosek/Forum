@@ -1,6 +1,5 @@
 import akka.actor.ActorSystem
 import akka.http.scaladsl.Http
-import akka.http.scaladsl.server.Directives._
 import akka.stream.ActorMaterializer
 import scala.concurrent.ExecutionContext.Implicits.global
 import slick.jdbc.H2Profile.api.Database
@@ -27,24 +26,4 @@ object WebServer extends {
 }
 
 
-trait ServerRoute extends ForumDB with JSONFormats {
-    val route =
-      path("topic" / "\\d+".r) { id =>
-        get {
-          println("GET", id)
-          complete {
-            getTopicWithReplies(id.toInt)
-          }
-        }
-      } ~
-      path("add-topic") {
-        post {
-          entity(as[Topic]) { topic =>
-            addTopic(topic)
-            complete("This is post")
-          }
-        }
-      }
 
-
-}

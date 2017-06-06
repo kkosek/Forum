@@ -9,10 +9,12 @@ import akka.http.scaladsl.model.StatusCodes._
 import akka.http.scaladsl.unmarshalling
 import akka.http.scaladsl.Http
 import akka.http.scaladsl.model._
+import org.scalatest.Tag
 
 class ForumSpec extends {
   val db = Database.forConfig("mydb")
   } with WordSpec with Matchers with ScalatestRouteTest with ServerRoute {
+
   "The service should" {
     "return non-empty topic with one reply for id=1" in {
       Get("/topic/1") ~> route ~> check {
@@ -38,12 +40,23 @@ class ForumSpec extends {
         }
       }
     }
-    "add query when json posted" in {
+    "add new topic when json posted on /add-topic" in {
       Post("/add-topic", HttpEntity(ContentTypes.`application/json`, """{"secret": 121212, "email": "email@email.com", "alias": "andrzej", "id": 3, "content": "Problem", "topic": "Temat", "timestamp": "2017-06-02 13:13:13"}""")) ~> route ~> check {
         status shouldBe OK
         responseAs[String] shouldEqual "This is post"
       }
     }
+    "add reply to topic when json posted on /reply-topic" in {
+      Post("/reply/1", HttpEntity(ContentTypes.`application/json`, """{"id": 12, "topicId": 3, "alias": "bukiet", "email": "bukiet@onet.pl", "content": "Dont worry", "timestamp": "0"}""")) ~> route ~> check {
+        status shouldBe OK
+      }
+    }
+    "remove topic and its replies from database" in {
+      Post("/delete/3") ~> route ~> check {
+        status shouldBe OK
+      }
+    }
+
     1
   }
 

@@ -1,5 +1,6 @@
 [0m[[0minfo[0m] [0m[32mForumSpec:[0m[0m
 [0m[[0minfo[0m] [0m[32m- return non-empty topic with one reply for id=1[0m[0m
 [0m[[0minfo[0m] [0m[32m- return one topic with two replies for id=2[0m[0m
-[0m[[0minfo[0m] [0m[31m- add query when json posted *** FAILED ***[0m[0m
-[0m[[0minfo[0m] [0m[31m  500 Internal Server Error was not equal to 200 OK (ForumSpec.scala:43)[0m[0m
+[0m[[0minfo[0m] [0m[32m- add new topic when json posted on /add-topic[0m[0m
+[0m[[0minfo[0m] [0m[32m- add reply to topic when json posted on /reply-topic[0m[0m
+[0m[[0minfo[0m] [0m[32m- remove topic and its replies from database[0m[0m

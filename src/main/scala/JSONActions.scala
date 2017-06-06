@@ -7,7 +7,7 @@ import java.util.Date
 trait JSONFormats extends SprayJsonSupport with DefaultJsonProtocol {
   implicit val timestampFormat: JsonFormat[Timestamp] = jsonFormat[Timestamp](TimestampReader, TimestampWriter)
   implicit val topicFormat = jsonFormat7(Topic.apply)
-  implicit val replyFormat = jsonFormat5(Reply.apply)
+  implicit val replyFormat = jsonFormat6(Reply.apply)
   implicit val topicWithReplyFormat = jsonFormat2(TopicWithReplies.apply)
 }
 
@@ -19,7 +19,7 @@ object TimestampReader extends RootJsonReader[Timestamp] {
     def read(json: JsValue): Timestamp = {
       println("Reader working ...")
       json match {
-        case time: JsString => {
+        case time: JsValue => {
           new java.util.Date
         }
         case _ => {
