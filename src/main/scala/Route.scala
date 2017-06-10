@@ -1,11 +1,15 @@
 import akka.http.scaladsl.server.Directives._
+import scala.util.{Failure, Success}
+import akka.http.scaladsl.model.StatusCodes._
+
 
 trait ServerRoute extends ForumDB with JSONFormats {
     val route =
       path("topic" / "\\d+".r) { id =>
         get {
-          complete {
-            getTopicWithReplies(id.toLong)
+          onComplete(getTopicWithReplies(id.toLong)) {
+            case Success(s) => complete(s: TopicWithReplies)
+            case Failure(e) => complete { InternalServerError }
           }
         }
       } ~
@@ -40,6 +44,15 @@ trait ServerRoute extends ForumDB with JSONFormats {
             complete("sth")
           }
         }
+      } ~
+      path("browse") {
+        get {
+          onComplete(getPaginatedResults) {
+            case Success(s) => complete(s)
+            case Failure(e) => complete { InternalServerError }
+          }
+        }
       }
+
 
 }

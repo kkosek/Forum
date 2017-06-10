@@ -9,7 +9,7 @@ final case class TopicWithReplies(topic: Topic, replies: List[Reply])
 final case class TopicEdition(id: Long, secret: Long, content: String)
 final case class Secret(secret: Long)
 
-trait DataBaseScheme {
+trait DatabaseScheme {
   class RepliesTable(tag: Tag) extends Table[Reply](tag, "replies") {
     def id = column[Long]("reply_id", O.PrimaryKey)
     def topicId = column[Long]("topic_id")
@@ -34,6 +34,6 @@ trait DataBaseScheme {
   val topics = TableQuery[TopicsTable]
 }
 
-object DataConversion {
+object DateConversion {
   implicit def dateToTimestamp(date: Date): Timestamp = new Timestamp(date.getTime)
 }

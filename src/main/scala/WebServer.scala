@@ -12,6 +12,7 @@ object WebServer extends {
   def main(args: Array[String]) {
     implicit val system = ActorSystem("my-system")
     implicit val materializer = ActorMaterializer()
+    setupDB
 
     val bindingFuture = Http().bindAndHandle(route, "localhost", 8080)
 

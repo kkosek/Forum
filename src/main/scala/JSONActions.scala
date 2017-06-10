@@ -14,7 +14,7 @@ trait JSONFormats extends SprayJsonSupport with DefaultJsonProtocol {
 }
 
 object TimestampReader extends RootJsonReader[Timestamp] {
-  import DataConversion._
+  import DateConversion._
     def read(json: JsValue): Timestamp = {
       json match {
         case time: JsValue => new java.util.Date
