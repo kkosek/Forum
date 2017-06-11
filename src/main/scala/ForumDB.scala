@@ -1,11 +1,5 @@
-import scala.concurrent.{Await, Future}
-import scala.concurrent.duration.Duration
 import slick.jdbc.PostgresProfile.api._
-
-
 import scala.concurrent.ExecutionContext.Implicits.global
-import scala.util.Success
-
 
 trait ForumDB extends DatabaseSetup {
   import DateConversion._
@@ -14,11 +8,27 @@ trait ForumDB extends DatabaseSetup {
     TopicWithReplies(unzippedList._1.head, unzippedList._2)
   }
 
+  implicit def ToTopicWithRepliesList(s: Seq[(Topic, Reply)]): List[TopicWithReplies] = {
+    val list = s.toList.unzip
+    val topics = list._1.distinct
+    val replies = list._2
+    val k = topics.map(t => TopicWithReplies(t, replies.filter(r => r.topicId == t.id)))
+    println(k)
+    k
+  }
+
+
   def getTopicWithReplies(id: Long) = {
+    //this doesn't work. why?
+/*    val query2 = topics.filter(_.id === id)
+        .map(x => (x, replies.filter(_.id === id)))
+        .result*/
+
     val query = for {
-      t <- topics if t.id === id
-      r <- replies if r.topicId === id
-    } yield (t, r)
+      t <- topics.filter(x => x.id === id)
+      n <- replies.filter(x => x.topicId === t.id)
+    } yield (t, n)
+
     db.run(query.result)
   }
 
@@ -59,11 +69,18 @@ trait ForumDB extends DatabaseSetup {
     db.run(query)
   }
 
-  def getPaginatedResults: Future[Seq[Reply]] = {
-    val getRecentReplies = replies.sortBy(_.timestamp).drop(5).take(5).result
+  def getPaginatedResults(page: Long) = {
+    val rowsOnPage = 10
+    val query = for {
+      t <- topics
+      n <- replies.sortBy(_.timestamp.desc).filter(x => x.topicId === t.id)
+    } yield (t, n)
+
+    val getRecentReplies = query
+      .drop(rowsOnPage * (page - 1))
+      .take(rowsOnPage).result
     db.run(getRecentReplies)
   }
-
 
 }
 

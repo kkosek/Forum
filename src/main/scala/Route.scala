@@ -45,10 +45,10 @@ trait ServerRoute extends ForumDB with JSONFormats {
           }
         }
       } ~
-      path("browse") {
+      path("browse=(\\d+)".r) { page =>
         get {
-          onComplete(getPaginatedResults) {
-            case Success(s) => complete(s)
+          onComplete(getPaginatedResults(page.toLong)) {
+            case Success(s) => complete(s: List[TopicWithReplies])
             case Failure(e) => complete { InternalServerError }
           }
         }
