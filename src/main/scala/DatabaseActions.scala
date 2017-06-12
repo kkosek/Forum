@@ -1,39 +1,40 @@
 import slick.jdbc.PostgresProfile.api._
 import scala.concurrent.ExecutionContext.Implicits.global
 
-trait ForumDB extends DatabaseSetup {
+trait DatabaseActions extends DatabaseSetup {
   import DateConversion._
   implicit def toTopicWithReplies(s: Seq[(Topic, Reply)]): TopicWithReplies = {
     val unzippedList = s.toList.unzip
     TopicWithReplies(unzippedList._1.head, unzippedList._2)
   }
 
+  def checkIfExists(id: Long) = topics.filter(_.id === id).exists.result
+
   implicit def ToTopicWithRepliesList(s: Seq[(Topic, Reply)]): List[TopicWithReplies] = {
     val list = s.toList.unzip
     val topics = list._1.distinct
     val replies = list._2
-    val k = topics.map(t => TopicWithReplies(t, replies.filter(r => r.topicId == t.id)))
-    println(k)
-    k
+    topics.map(t => TopicWithReplies(t, replies.filter(r => r.topicId == t.id)))
   }
 
-
   def getTopicWithReplies(id: Long) = {
-    //this doesn't work. why?
-/*    val query2 = topics.filter(_.id === id)
-        .map(x => (x, replies.filter(_.id === id)))
-        .result*/
-
-    val query = for {
+    val get = for {
       t <- topics.filter(x => x.id === id)
       n <- replies.filter(x => x.topicId === t.id)
     } yield (t, n)
 
-    db.run(query.result)
+    val query = checkIfExists(id).flatMap {
+      case true => get.result
+      case false =>  DBIO.failed(new RuntimeException("There is no topic with such id and secret."))
+    }
+    db.run(query)
   }
 
   def addTopic(topic: Topic) = {
-    val insert = topics += topic
+    val insert = checkIfExists(topic.id).flatMap {
+      case false => topics += topic
+      case true => DBIO.failed(new RuntimeException("Topic with this id already exists."))
+    }
     db.run(insert)
   }
 
@@ -81,7 +82,6 @@ trait ForumDB extends DatabaseSetup {
       .take(rowsOnPage).result
     db.run(getRecentReplies)
   }
-
 }
 
 

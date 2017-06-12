@@ -2,38 +2,41 @@ import akka.http.scaladsl.server.Directives._
 import scala.util.{Failure, Success}
 import akka.http.scaladsl.model.StatusCodes._
 
-
-trait ServerRoute extends ForumDB with JSONFormats {
+trait Route extends DatabaseActions with Protocols {
     val route =
-      path("topic" / "\\d+".r) { id =>
+      path("topic=(\\d+)".r) { id =>
         get {
           onComplete(getTopicWithReplies(id.toLong)) {
             case Success(s) => complete(s: TopicWithReplies)
-            case Failure(e) => complete { InternalServerError }
+            case Failure(e) => complete(NotFound -> "There is no topic with such id.")
           }
         }
       } ~
       path("add-topic") {
         post {
           entity(as[Topic]) { topic =>
-            addTopic(topic)
-            complete("This is post")
+            onComplete(addTopic(topic)) {
+              case Success(s) => complete(Created -> "Topic was created.")
+              case Failure(e) => complete(Forbidden -> "Topic with this id already exists")
+            }
           }
         }
       } ~
-      path("reply" / "\\d+".r) { id =>
+      path("reply") {
         post {
           entity(as[Reply]) { reply =>
             addReply(reply)
-            complete("sth")
+            complete(OK -> "Added reply")
           }
         }
       } ~
-      path("delete" / "\\d+".r) { id =>
+      path("delete") {
         post {
-          entity(as[Secret]) { secret =>
-            deleteTopic(id.toLong, secret)
-            complete("sth")
+          entity(as[IDWithSecret]) { i =>
+            onComplete(deleteTopic(i.id, i.secret)) {
+              case Success(s) => complete(OK -> "Item was deleted")
+              case Failure(e) => complete(NotFound -> "Error: neither secret or id is valid.")
+            }
           }
         }
       } ~
@@ -41,7 +44,7 @@ trait ServerRoute extends ForumDB with JSONFormats {
         post {
           entity(as[TopicEdition]) { topicEdition =>
             updateTopic(topicEdition)
-            complete("sth")
+            complete(OK -> "Topic was edited successfully.")
           }
         }
       } ~
@@ -49,10 +52,8 @@ trait ServerRoute extends ForumDB with JSONFormats {
         get {
           onComplete(getPaginatedResults(page.toLong)) {
             case Success(s) => complete(s: List[TopicWithReplies])
-            case Failure(e) => complete { InternalServerError }
+            case Failure(e) => complete {NotFound -> "Page does not exists."}
           }
         }
       }
-
-
 }

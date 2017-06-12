@@ -7,7 +7,7 @@ final case class Topic(id: Long, alias: String, email: String, content: String, 
 final case class Reply(id: Long, topicId: Long, alias: String, email: String, content: String, timestamp: Timestamp)
 final case class TopicWithReplies(topic: Topic, replies: List[Reply])
 final case class TopicEdition(id: Long, secret: Long, content: String)
-final case class Secret(secret: Long)
+final case class IDWithSecret(id: Long, secret: Long)
 
 trait DatabaseScheme {
   class RepliesTable(tag: Tag) extends Table[Reply](tag, "replies") {
