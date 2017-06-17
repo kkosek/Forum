@@ -1,5 +1,6 @@
 [debug] Other repositories:
 [debug] Default repositories:
+[debug] no default cache defined: set to /home/kasia/.ivy2/cache
 [debug] Using inline dependencies specified in Scala.
 [debug] :: resolving dependencies :: default#forum$sbt_2.10;1.0
 [debug] 	confs: [default]
@@ -1778,9 +1779,9 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.15!apply-macro.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#template-resolver;0.1!template-resolver.jar
-[debug] :: resolution report :: resolve 3367ms :: artifacts dl 100ms
+[debug] :: resolution report :: resolve 2346ms :: artifacts dl 113ms
 [debug] 	report for default#forum$sbt_2.10;1.0 default produced in /home/kasia/scalaLearning/Forum/target/resolution-cache/reports/default-forum$sbt_2.10-default.xml
-[debug] 	resolve done (3367ms resolve - 100ms download)
+[debug] 	resolve done (2346ms resolve - 113ms download)
 [debug] Using inline dependencies specified in Scala.
 [debug] :: resolving dependencies :: default#forum$sources_2.10;1.0
 [debug] 	confs: [default]
@@ -2458,6 +2459,6 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#incremental-compiler;0.13.15!incremental-compiler.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#logic;0.13.15!logic.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#main-settings;0.13.15!main-settings.jar(src)
-[debug] :: resolution report :: resolve 519ms :: artifacts dl 110ms
+[debug] :: resolution report :: resolve 836ms :: artifacts dl 101ms
 [debug] 	report for default#forum$sources_2.10;1.0 default produced in /home/kasia/scalaLearning/Forum/target/resolution-cache/reports/default-forum$sources_2.10-default.xml
-[debug] 	resolve done (519ms resolve - 110ms download)
+[debug] 	resolve done (836ms resolve - 101ms download)

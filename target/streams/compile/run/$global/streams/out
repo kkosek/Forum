@@ -1,5 +1,6 @@
 [0m[[0minfo[0m] [0mRunning WebServer [0m
 [0m[[0mdebug[0m] [0mWaiting for threads to exit or System.exit to be called.[0m
+[0m[[0mdebug[0m] [0mWaiting for thread run-main-4 to terminate.[0m
 [0m[[0mdebug[0m] [0m  Classpath:[0m
 [0m[[0mdebug[0m] [0m	/home/kasia/scalaLearning/Forum/target/scala-2.12/classes[0m
 [0m[[0mdebug[0m] [0m	/home/kasia/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.2.jar[0m
@@ -75,20 +76,3 @@
 [0m[[0mdebug[0m] [0m	/home/kasia/.ivy2/cache/com.github.nscala-time/nscala-time_2.12/jars/nscala-time_2.12-2.16.0.jar[0m
 [0m[[0mdebug[0m] [0m	/home/kasia/.ivy2/cache/joda-time/joda-time/jars/joda-time-2.9.7.jar[0m
 [0m[[0mdebug[0m] [0m	/home/kasia/.ivy2/cache/org.joda/joda-convert/jars/joda-convert-1.2.jar[0m
-[0m[[0mdebug[0m] [0mWaiting for thread run-main-3 to terminate.[0m
-[0m[[0mdebug[0m] [0m	Thread run-main-3 exited.[0m
-[0m[[0mdebug[0m] [0mWaiting for thread my-system-scheduler-1 to terminate.[0m
-[0m[[0mdebug[0m] [0m	Thread my-system-scheduler-1 exited.[0m
-[0m[[0mdebug[0m] [0mWaiting for thread my-system-akka.actor.default-dispatcher-3 to terminate.[0m
-[0m[[0mdebug[0m] [0m	Thread my-system-akka.actor.default-dispatcher-3 exited.[0m
-[0m[[0mdebug[0m] [0mWaiting for thread my-system-akka.actor.default-dispatcher-10 to terminate.[0m
-[0m[[0mdebug[0m] [0m	Thread my-system-akka.actor.default-dispatcher-10 exited.[0m
-[0m[[0mdebug[0m] [0mWaiting for thread my-system-akka.actor.default-dispatcher-6 to terminate.[0m
-[0m[[0mdebug[0m] [0m	Thread my-system-akka.actor.default-dispatcher-6 exited.[0m
-[0m[[0mdebug[0m] [0mInterrupting remaining threads (should be all daemons).[0m
-[0m[[0mdebug[0m] [0mInterrupting thread Thread-9[0m
-[0m[[0mdebug[0m] [0m	Interrupted Thread-9[0m
-[0m[[0mdebug[0m] [0mInterrupting thread scala-execution-context-global-276[0m
-[0m[[0mdebug[0m] [0m	Interrupted scala-execution-context-global-276[0m
-[0m[[0mdebug[0m] [0mSandboxed run complete..[0m
-[0m[[0mdebug[0m] [0mExited with code 0[0m

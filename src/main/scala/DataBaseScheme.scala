@@ -4,7 +4,7 @@ import java.sql.Timestamp
 import java.util.Date
 
 final case class Topic(id: Long, alias: String, email: String, content: String, topic: String, secret: Long, timestamp: Timestamp)
-final case class Reply(id: Long, topicId: Long, alias: String, email: String, content: String, timestamp: Timestamp)
+final case class Reply(id: Long, topicID: Long, alias: String, email: String, content: String, timestamp: Timestamp)
 final case class TopicWithReplies(topic: Topic, replies: List[Reply])
 final case class TopicEdition(id: Long, secret: Long, content: String)
 final case class IDWithSecret(id: Long, secret: Long)
@@ -12,12 +12,12 @@ final case class IDWithSecret(id: Long, secret: Long)
 trait DatabaseScheme {
   class RepliesTable(tag: Tag) extends Table[Reply](tag, "replies") {
     def id = column[Long]("reply_id", O.PrimaryKey)
-    def topicId = column[Long]("topic_id")
+    def topicID = column[Long]("topic_id")
     def alias = column[String]("alias")
     def email = column[String]("email")
     def content = column[String]("content")
     def timestamp = column[Timestamp]("timestamp")
-    def * = (id, topicId, alias, email, content, timestamp) <> (Reply.tupled, Reply.unapply)
+    def * = (id, topicID, alias, email, content, timestamp) <> (Reply.tupled, Reply.unapply)
   }
   val replies = TableQuery[RepliesTable]
 
