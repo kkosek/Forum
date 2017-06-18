@@ -3,11 +3,11 @@ import slick.jdbc.PostgresProfile.api._
 import java.sql.Timestamp
 import java.util.Date
 
-final case class Topic(id: Long, alias: String, email: String, content: String, topic: String, secret: Long, timestamp: Timestamp)
-final case class Reply(id: Long, topicID: Long, alias: String, email: String, content: String, timestamp: Timestamp)
-final case class TopicWithReplies(topic: Topic, replies: List[Reply])
-final case class TopicEdition(id: Long, secret: Long, content: String)
-final case class IDWithSecret(id: Long, secret: Long)
+case class Topic(id: Long, alias: String, email: String, content: String, topic: String, secret: Long, timestamp: Timestamp)
+case class Reply(id: Long, topicID: Long, alias: String, email: String, content: String, timestamp: Timestamp)
+case class TopicWithReplies(topic: Topic, replies: Seq[Reply])
+case class Content(content: String)
+case class ErrorMessage(message: String)
 
 trait DatabaseScheme {
   class RepliesTable(tag: Tag) extends Table[Reply](tag, "replies") {

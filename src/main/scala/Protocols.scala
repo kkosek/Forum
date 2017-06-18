@@ -5,12 +5,13 @@ import scala.language.implicitConversions
 
 trait Protocols extends SprayJsonSupport with DefaultJsonProtocol {
   implicit val timestampFormat: JsonFormat[Timestamp] = jsonFormat[Timestamp](TimestampReader, TimestampWriter)
+  implicit val errorMessageFormat = jsonFormat1(ErrorMessage.apply)
   implicit val topicFormat = jsonFormat7(Topic.apply)
   implicit val replyFormat = jsonFormat6(Reply.apply)
-  implicit val secretFormat = jsonFormat2(IDWithSecret.apply)
   implicit val topicWithReplyFormat = jsonFormat2(TopicWithReplies.apply)
-  implicit val topicEditionFormat = jsonFormat3(TopicEdition.apply)
+  implicit val contentFormat = jsonFormat1(Content.apply)
 }
+
 
 object TimestampReader extends RootJsonReader[Timestamp] {
   import DateConversion._
