@@ -1779,9 +1779,9 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.15!apply-macro.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#template-resolver;0.1!template-resolver.jar
-[debug] :: resolution report :: resolve 2346ms :: artifacts dl 113ms
-[debug] 	report for default#forum$sbt_2.10;1.0 default produced in /home/kasia/scalaLearning/Forum/target/resolution-cache/reports/default-forum$sbt_2.10-default.xml
-[debug] 	resolve done (2346ms resolve - 113ms download)
+[debug] :: resolution report :: resolve 3514ms :: artifacts dl 59ms
+[debug] 	report for default#forum$sbt_2.10;1.0 default produced in /home/kasia/Forum/target/resolution-cache/reports/default-forum$sbt_2.10-default.xml
+[debug] 	resolve done (3514ms resolve - 59ms download)
 [debug] Using inline dependencies specified in Scala.
 [debug] :: resolving dependencies :: default#forum$sources_2.10;1.0
 [debug] 	confs: [default]
@@ -2459,6 +2459,6 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#incremental-compiler;0.13.15!incremental-compiler.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#logic;0.13.15!logic.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#main-settings;0.13.15!main-settings.jar(src)
-[debug] :: resolution report :: resolve 836ms :: artifacts dl 101ms
-[debug] 	report for default#forum$sources_2.10;1.0 default produced in /home/kasia/scalaLearning/Forum/target/resolution-cache/reports/default-forum$sources_2.10-default.xml
-[debug] 	resolve done (836ms resolve - 101ms download)
+[debug] :: resolution report :: resolve 507ms :: artifacts dl 45ms
+[debug] 	report for default#forum$sources_2.10;1.0 default produced in /home/kasia/Forum/target/resolution-cache/reports/default-forum$sources_2.10-default.xml
+[debug] 	resolve done (507ms resolve - 45ms download)

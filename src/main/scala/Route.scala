@@ -2,7 +2,7 @@ import akka.http.scaladsl.server.Directives._
 import scala.util.{Failure, Success}
 import akka.http.scaladsl.model.StatusCodes._
 import spray.json._
-
+import scala.concurrent.Future
 
 trait Route extends DatabaseActions with Protocols {
   val route =
@@ -42,11 +42,16 @@ trait Route extends DatabaseActions with Protocols {
             }
         }
       } ~
-      pathPrefix("page" / LongNumber) { page =>
-        get {
-          val a = getPaginatedResults(page)
-          println(a)
-          complete(a)
+      pathPrefix("page") {
+        path(LongNumber) { page =>
+          get {
+            complete(getPaginatedResults(page))
+          }
+        } ~
+        path("id" / LongNumber) { id =>
+          get {
+            complete(getPaginationByTopic(id))
+          }
         }
       }
     }

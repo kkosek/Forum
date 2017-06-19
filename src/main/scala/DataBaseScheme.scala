@@ -1,9 +1,10 @@
-import slick.lifted.Tag
 import slick.jdbc.PostgresProfile.api._
 import java.sql.Timestamp
 import java.util.Date
+import slick.lifted.Tag
+import slick.lifted.OptionExtensionMethods
 
-case class Topic(id: Long, alias: String, email: String, content: String, topic: String, secret: Long, timestamp: Timestamp)
+case class Topic(id: Option[Long] = None, alias: String, email: String, content: String, topic: String, secret: Long, timestamp: Timestamp)
 case class Reply(id: Long, topicID: Long, alias: String, email: String, content: String, timestamp: Timestamp)
 case class TopicWithReplies(topic: Topic, replies: Seq[Reply])
 case class Content(content: String)
@@ -22,14 +23,14 @@ trait DatabaseScheme {
   val replies = TableQuery[RepliesTable]
 
   class TopicsTable(tag: Tag) extends Table[Topic] (tag, "topics") {
-    def id = column[Long]("topic_id", O.PrimaryKey)
+    def id = column[Option[Long]]("topic_id", O.PrimaryKey, O.AutoInc)
     def alias = column[String]("alias")
     def email = column[String]("email")
     def content = column[String]("content")
     def topic = column[String]("topic")
     def secret = column[Long]("secret")
     def timestamp = column[Timestamp]("timestamp")
-    def * = (id, alias, email, content, topic, secret, timestamp) <> (Topic.tupled, Topic.unapply)
+    def * = (alias, email, content, topic, secret, timestamp) <> (Topic.tupled, Topic.unapply)
   }
   val topics = TableQuery[TopicsTable]
 }

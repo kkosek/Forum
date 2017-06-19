@@ -17,7 +17,7 @@ trait DatabaseSetup extends DatabaseScheme {
 
   def generateTopics: Seq[Topic] = {
     for (i <- 0 to 200) yield
-      Topic(i, "andrea" + i*2, "andrea@wp.pl", "Przedstawiam mój problem", "Problem", i, new Timestamp(nextInt))
+      Topic("andrea" + i*2, "andrea@wp.pl", "Przedstawiam mój problem", "Problem", i, new Timestamp(nextInt))
   }
 
   def generateReplies: Seq[Reply] = {

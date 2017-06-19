@@ -3,13 +3,14 @@ import scala.concurrent.ExecutionContext.Implicits.global
 import akka.http.scaladsl.model.StatusCodes._
 import scala.concurrent.Future
 
-
 trait DatabaseActions extends DatabaseSetup with Protocols {
   import DateConversion._
+  val rowsOnPage = 10
 
-  implicit def toTopicWithRepliesList(sequence: Seq[(Topic, Reply)]) = {
+  def toTopicWithRepliesList(sequence: Seq[(Topic, Reply)]): Seq[TopicWithReplies] = {
     val s = sequence.groupBy(_._1) mapValues(_ map (_._2))
-    val f = s.map { case (t, rs) => TopicWithReplies(t, rs)}
+    s.map { case (t, rs) => TopicWithReplies(t, rs)}
+      .toSeq
   }
 
   def getTopicWithReply(id: Long) = {
@@ -31,9 +32,7 @@ trait DatabaseActions extends DatabaseSetup with Protocols {
   }
 
   def getAllTopics = {
-    db.run(topics.result) flatMap {
-        case s => Future.successful(s)
-    }
+    db.run(topics.result)
   }
 
   def getRepliesForTopic(topicID: Long) = {
@@ -89,22 +88,38 @@ trait DatabaseActions extends DatabaseSetup with Protocols {
   }
 
   def getPaginatedResults(page: Long) = {
-    val rowsOnPage = 10
     val query = (for {
-      t <- topics
-      n <- replies.sortBy(_.timestamp.desc).filter(x => x.topicID === t.id)
-    } yield (t, n))
+      r <- replies.sortBy(_.timestamp.desc)
+      t <- topics.filter(_.id === r.topicID)
+    } yield t).drop((page - 1) * rowsOnPage).take(rowsOnPage)
 
-    db.run(query.result).flatMap {
-      case s => Future.successful(s)
+    db.run(query.result) flatMap { s =>
+      Future.successful(s.distinct)
     }
+  }
 
+  def dropValue(size: Long, before: Long): Long = {
+    val proportions = before / size
+    (before - (rowsOnPage * proportions).floor).toLong
+  }
 
-
-/*    val getRecentReplies = query
-      .drop(rowsOnPage * (page - 1))
-      .take(rowsOnPage).result
-    db.run(getRecentReplies)*/
+  def getPaginationByTopic(id: Long) = {
+    db.run(topics.size.result) flatMap {
+      case length if (length > 0) => {
+        db.run(topics.filter(_.id === id).result.headOption) flatMap {
+          case Some(t) => {
+            db.run(topics.sortBy(_.timestamp).filter(_.timestamp < t.timestamp).size.result) flatMap {
+              before => db.run(topics.sortBy(_.timestamp)
+                .drop(dropValue(length, before)).take(rowsOnPage).result) flatMap {t =>
+                Future.successful(Right(t))
+              }
+            }
+          }
+          case None => Future.successful(Left(ErrorMessage("There is no topic with this id.")))
+        }
+      }
+      case _ => Future.successful(Right(Seq()))
+    }
   }
 }
 
