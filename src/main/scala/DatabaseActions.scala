@@ -27,7 +27,7 @@ trait DatabaseActions extends DatabaseSetup with Protocols {
   def getTopic(id: Long) = {
     db.run(topics.filter(_.id === id).result.headOption) flatMap {
       case Some(s) => Future.successful(Right(s))
-      case None    => Future.successful(Left(ErrorMessage("There is no topic.")))
+      case None    => Future.successful(Left(ErrorMessage("There is no topic with this id.")))
     }
   }
 
@@ -103,7 +103,7 @@ trait DatabaseActions extends DatabaseSetup with Protocols {
     (before - (rowsOnPage * proportions).floor).toLong
   }
 
-  def getPaginationByTopic(id: Long) = {
+  def getPaginatedResultsByTopic(id: Long) = {
     db.run(topics.size.result) flatMap {
       case length if (length > 0) => {
         db.run(topics.filter(_.id === id).result.headOption) flatMap {
