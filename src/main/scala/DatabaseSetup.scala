@@ -6,7 +6,6 @@ import scala.util.Random.nextInt
 
 
 trait DatabaseSetup extends DatabaseScheme {
-  import DateConversion._
   def db: Database
 
   def clearDB() = {
@@ -17,14 +16,14 @@ trait DatabaseSetup extends DatabaseScheme {
 
   def generateTopics: Seq[Topic] = {
     for (i <- 0 to 200) yield
-      Topic("andrea" + i*2, "andrea@wp.pl", "Przedstawiam mój problem", "Problem", i, new Timestamp(nextInt))
+      Topic(None, "andrea" + i*2, "andrea@wp.pl", "Przedstawiam mój problem", "Problem", i, new Timestamp(nextInt))
   }
 
   def generateReplies: Seq[Reply] = {
     for {
       i <- 1 to 600
       topicID = floor(i / 3) toLong
-    } yield Reply(i, topicID, "grazyna", "grazyna12@onet.pl", "To jest moja odpowiedz", new Timestamp(nextInt))
+    } yield Reply(None, topicID, "grazyna", "grazyna12@onet.pl", "To jest moja odpowiedz", new Timestamp(nextInt))
   }
   def addData = {
     val insertTopics = topics ++= generateTopics

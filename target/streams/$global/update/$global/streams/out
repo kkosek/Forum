@@ -15072,7 +15072,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scalatest#scalatest_2.12;3.2.0-SNAP6!scalatest_2.12.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-compiler;2.12.2!scala-compiler.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] jline#jline;2.14.3!jline.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 148139ms :: artifacts dl 42ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 43006ms :: artifacts dl 50ms[0m
 [0m[[0mdebug[0m] [0m	report for default#forum_2.12;1.0 compile produced in /home/kasia/Forum/target/resolution-cache/reports/default-forum_2.12-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#forum_2.12;1.0 runtime produced in /home/kasia/Forum/target/resolution-cache/reports/default-forum_2.12-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#forum_2.12;1.0 test produced in /home/kasia/Forum/target/resolution-cache/reports/default-forum_2.12-test.xml[0m
@@ -15086,7 +15086,7 @@
 [0m[[0mdebug[0m] [0m	report for default#forum_2.12;1.0 docs produced in /home/kasia/Forum/target/resolution-cache/reports/default-forum_2.12-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#forum_2.12;1.0 pom produced in /home/kasia/Forum/target/resolution-cache/reports/default-forum_2.12-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#forum_2.12;1.0 scala-tool produced in /home/kasia/Forum/target/resolution-cache/reports/default-forum_2.12-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (148139ms resolve - 42ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (43006ms resolve - 50ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m
 [0m[[33mwarn[0m] [0mThere may be incompatibilities among your library dependencies.[0m
 [0m[[33mwarn[0m] [0mHere are some of the libraries that were evicted:[0m

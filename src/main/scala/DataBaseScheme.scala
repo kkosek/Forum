@@ -1,36 +1,35 @@
 import slick.jdbc.PostgresProfile.api._
 import java.sql.Timestamp
 import java.util.Date
-import slick.lifted.Tag
-import slick.lifted.OptionExtensionMethods
+import slick.lifted.{Tag}
 
 case class Topic(id: Option[Long] = None, alias: String, email: String, content: String, topic: String, secret: Long, timestamp: Timestamp)
-case class Reply(id: Long, topicID: Long, alias: String, email: String, content: String, timestamp: Timestamp)
+case class Reply(id: Option[Long] = None, topicID: Long, alias: String, email: String, content: String, timestamp: Timestamp)
 case class TopicWithReplies(topic: Topic, replies: Seq[Reply])
 case class Content(content: String)
 case class ErrorMessage(message: String)
 
 trait DatabaseScheme {
   class RepliesTable(tag: Tag) extends Table[Reply](tag, "replies") {
-    def id = column[Long]("reply_id", O.PrimaryKey)
+    def id = column[Long]("reply_id", O.PrimaryKey, O.AutoInc)
     def topicID = column[Long]("topic_id")
     def alias = column[String]("alias")
     def email = column[String]("email")
     def content = column[String]("content")
     def timestamp = column[Timestamp]("timestamp")
-    def * = (id, topicID, alias, email, content, timestamp) <> (Reply.tupled, Reply.unapply)
+    def * = (id.?, topicID, alias, email, content, timestamp) <> (Reply.tupled, Reply.unapply)
   }
   val replies = TableQuery[RepliesTable]
 
   class TopicsTable(tag: Tag) extends Table[Topic] (tag, "topics") {
-    def id = column[Option[Long]]("topic_id", O.PrimaryKey, O.AutoInc)
+    def id = column[Long]("topic_id", O.PrimaryKey, O.AutoInc)
     def alias = column[String]("alias")
     def email = column[String]("email")
     def content = column[String]("content")
     def topic = column[String]("topic")
     def secret = column[Long]("secret")
     def timestamp = column[Timestamp]("timestamp")
-    def * = (alias, email, content, topic, secret, timestamp) <> (Topic.tupled, Topic.unapply)
+    def * = (id.?, alias, email, content, topic, secret, timestamp) <> (Topic.tupled, Topic.unapply)
   }
   val topics = TableQuery[TopicsTable]
 }
