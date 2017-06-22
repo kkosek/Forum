@@ -8,7 +8,7 @@ import scala.util.Random.nextInt
 trait DatabaseSetup extends DatabaseScheme {
   def db: Database
 
-  def clearDB() = {
+  def clearDB: Unit = {
     val removeTopics = topics.delete
     val removeReplies = replies.delete
     db.run(removeTopics andThen removeReplies)
@@ -25,13 +25,13 @@ trait DatabaseSetup extends DatabaseScheme {
       topicID = floor(i / 3) toLong
     } yield Reply(None, topicID, "grazyna", "grazyna12@onet.pl", "To jest moja odpowiedz", new Timestamp(nextInt))
   }
-  def addData = {
+  def addData: Unit = {
     val insertTopics = topics ++= generateTopics
     val insertReplies = replies ++= generateReplies
     db.run(insertTopics andThen insertReplies)
   }
 
-  def setupDB = {
+  def setupDB: Unit = {
     clearDB
     addData
   }
