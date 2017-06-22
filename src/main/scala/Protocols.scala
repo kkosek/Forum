@@ -3,13 +3,16 @@ import spray.json._
 import java.sql.Timestamp
 import scala.language.implicitConversions
 
+case class TopicToRemove(id: Long, secret: Long)
+case class UpdatedTopic(id: Long, secret: Long, content: String)
+
 trait Protocols extends SprayJsonSupport with DefaultJsonProtocol {
   implicit val timestampFormat: JsonFormat[Timestamp] = jsonFormat[Timestamp](TimestampReader, TimestampWriter)
   implicit val errorMessageFormat = jsonFormat1(ErrorMessage.apply)
   implicit val topicFormat = jsonFormat7(Topic.apply)
   implicit val replyFormat = jsonFormat6(Reply.apply)
-  implicit val topicWithReplyFormat = jsonFormat2(TopicWithReplies.apply)
-  implicit val contentFormat = jsonFormat1(Content.apply)
+  implicit val deleteTopicFormat = jsonFormat2(TopicToRemove.apply)
+  implicit val updateTopicFormat = jsonFormat3(UpdatedTopic.apply)
 }
 
 

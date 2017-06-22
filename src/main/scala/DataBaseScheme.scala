@@ -5,8 +5,6 @@ import slick.lifted.{Tag}
 
 case class Topic(id: Option[Long] = None, alias: String, email: String, content: String, topic: String, secret: Long, timestamp: Timestamp)
 case class Reply(id: Option[Long] = None, topicID: Long, alias: String, email: String, content: String, timestamp: Timestamp)
-case class TopicWithReplies(topic: Topic, replies: Seq[Reply])
-case class Content(content: String)
 case class ErrorMessage(message: String)
 
 trait DatabaseScheme {

@@ -19,27 +19,25 @@ trait Route extends DatabaseActions with Protocols {
         pathEndOrSingleSlash {
           get {
             complete(getTopic(topicID))
-          }
-        } ~
-        pathPrefix("secret") {
-          path(LongNumber) { secret =>
-            delete {
-              complete(deleteTopic(topicID, secret))
-            } ~
-            patch {
-              entity(as[Content]) { content =>
-                complete(updateTopic(topicID, secret, content))
-              }
+          } ~
+          delete {
+            entity(as[TopicToRemove]) { topicToRemove =>
+              complete(deleteTopic(topicToRemove))
+            }
+          } ~
+          patch {
+            entity(as[UpdatedTopic]) { updatedTopic: UpdatedTopic =>
+              complete(updateTopic(updatedTopic))
             }
           }
         } ~
         pathPrefix("reply") {
-            pathEndOrSingleSlash {
-              get { complete(getRepliesForTopic(topicID)) }
-            } ~
-            path(LongNumber) { replyID =>
-              get { complete(getReply(replyID)) }
-            }
+          pathEndOrSingleSlash {
+            get { complete(getRepliesForTopic(topicID)) }
+          } ~
+          path(LongNumber) { replyID =>
+            get { complete(getReply(replyID)) }
+          }
         }
       } ~
       pathPrefix("page") {
@@ -50,7 +48,7 @@ trait Route extends DatabaseActions with Protocols {
         } ~
         path("id" / LongNumber) { id =>
           get {
-            complete(getPaginationByTopic(id))
+            complete(getPaginatedResultsByTopic(id))
           }
         }
       }
