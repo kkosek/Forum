@@ -343,3 +343,5 @@ run
 compile
 clean
 compile
+run
+compile

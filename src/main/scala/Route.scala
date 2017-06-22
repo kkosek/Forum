@@ -40,16 +40,14 @@ trait Route extends DatabaseActions with Protocols {
           }
         }
       } ~
-      pathPrefix("page") {
-        path(LongNumber) { page =>
-          get {
-            complete(getPaginatedResults(page))
-          }
-        } ~
-        path("id" / LongNumber) { id =>
-          get {
-            complete(getPaginatedResultsByTopic(id))
-          }
+      path("page" / LongNumber) { page =>
+        get {
+          complete(getPaginatedResults(page))
+        }
+      } ~
+      path("id" / LongNumber) { id =>
+        get {
+          complete(getPaginatedResultsByTopic(id))
         }
       }
     }

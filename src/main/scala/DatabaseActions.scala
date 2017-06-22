@@ -49,7 +49,7 @@ trait DatabaseActions extends DatabaseSetup with Protocols {
   def deleteTopic(topicToRemove: TopicToRemove): Future[Either[ErrorMessage, StatusCode]] = {
     validate(topicToRemove.id, topicToRemove.secret).flatMap {
       case Left(l) => Future.successful(Left(l))
-      case Right(r) => db.run(topics.filter(_.id === id).delete)
+      case Right(r) => db.run(topics.filter(_.id === topicToRemove.id).delete)
         .flatMap { x => Future.successful(Right(StatusCodes.OK))}
       }
   }
@@ -65,15 +65,14 @@ trait DatabaseActions extends DatabaseSetup with Protocols {
     }
   }
 
-  def getPaginatedResults(page: Long): Future[Seq[Topic]] = {
+  def getPaginatedResults(page: Long): Future[Either[ErrorMessage, Seq[Topic]]] = {
     val query = (for {
-      r <- replies.sortBy(_.timestamp.desc)
-      t <- topics.filter(_.id === r.topicID)
-    } yield t).drop((page - 1) * rowsOnPage).take(rowsOnPage)
+        r <- replies.sortBy(_.timestamp.desc)
+        t <- topics.filter(_.id === r.topicID)
+      } yield t).drop((page - 1) * rowsOnPage).take(rowsOnPage).distinct
 
-    db.run(query.result) flatMap { s =>
-      Future.successful(s.distinct)
-    }
+    if (page <= 0) Future.successful(Left(ErrorMessage("Pages start from '1'.")))
+    else db.run(query.result) flatMap( s => Future.successful(Right(s)))
   }
 
   def dropValue(size: Long, before: Long): Long = {
