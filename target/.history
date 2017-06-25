@@ -345,3 +345,8 @@ clean
 compile
 run
 compile
+scala
+run
+compile
+run
+compile

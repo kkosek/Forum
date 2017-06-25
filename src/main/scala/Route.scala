@@ -1,17 +1,14 @@
 import akka.http.scaladsl.server.Directives._
-import scala.util.{Failure, Success}
 import akka.http.scaladsl.model.StatusCodes._
-import spray.json._
-import scala.concurrent.Future
 
 trait Route extends DatabaseActions with Protocols {
   val route =
     pathPrefix("topic") {
       pathEndOrSingleSlash {
-        get { complete(getAllTopics) } ~
+        get { complete (getAllTopics) } ~
         post {
           entity(as[Topic]) { topic =>
-            complete(OK)
+            complete(Created, addTopic(topic))
           }
         }
       } ~
@@ -21,13 +18,13 @@ trait Route extends DatabaseActions with Protocols {
             complete(getTopic(topicID))
           } ~
           delete {
-            entity(as[TopicToRemove]) { topicToRemove =>
+            entity(as[DataToRemove]) { topicToRemove =>
               complete(deleteTopic(topicToRemove))
             }
           } ~
           patch {
-            entity(as[UpdatedTopic]) { updatedTopic: UpdatedTopic =>
-              complete(updateTopic(updatedTopic))
+            entity(as[DataToUpdate]) { topicToUpdate =>
+              complete(updateTopic(topicToUpdate))
             }
           }
         } ~

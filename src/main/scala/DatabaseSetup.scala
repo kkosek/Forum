@@ -23,7 +23,7 @@ trait DatabaseSetup extends DatabaseScheme {
     for {
       i <- 1 to 600
       topicID = floor(i / 3) toLong
-    } yield Reply(None, topicID, "grazyna", "grazyna12@onet.pl", "To jest moja odpowiedz", new Timestamp(nextInt))
+    } yield Reply(None, topicID, "grazyna", "grazyna12@onet.pl", "To jest moja odpowiedz", i, new Timestamp(nextInt))
   }
   def addData: Unit = {
     val insertTopics = topics ++= generateTopics

@@ -8,10 +8,10 @@ trait DatabaseActions extends DatabaseSetup with Protocols {
   import DateConversion._
   val rowsOnPage = 10
 
-  def getTopic(id: Long): Future[Either[ErrorMessage, Topic]] = {
+  def getTopic(id: Long): Future[Either[(StatusCode, ErrorMessage), (StatusCode, Topic)]] = {
     db.run(topics.filter(_.id === id).result.headOption) flatMap {
-      case Some(s) => Future.successful(Right(s))
-      case None    => Future.successful(Left(ErrorMessage("There is no topic with this id.")))
+      case Some(s) => Future.successful(Right(StatusCodes.OK, s))
+      case None    => Future.successful(Left(StatusCodes.NotFound, ErrorMessage("There is no topic with this id.")))
     }
   }
 
@@ -32,9 +32,19 @@ trait DatabaseActions extends DatabaseSetup with Protocols {
     }
   }
 
-  def addTopic(topic: Topic): Unit = db.run(topics += topic)
+  def addTopic(topic: Topic): Future[Either[ErrorMessage, Topic]]= {
+    db.run(topics += topic) flatMap {
+      case t if t == 0 => Future.successful(Right(topic))
+      case _ => Future.successful(Left(ErrorMessage("Topic was not added.")))
+    }
+  }
 
-  def addReply(reply: Reply): Unit = db.run(replies += reply)
+  def addReply(reply: Reply): Future[Either[StatusCode, Reply]] = {
+    db.run(replies += reply) flatMap {
+      case r if r == 0 => Future.successful(Right(reply))
+      case _ => Future.successful(Left(StatusCodes.BadRequest))
+    }
+  }
 
   def validate(id: Long, secret: Long): Future[Either[ErrorMessage, Boolean]] = {
     db.run(topics.filter(_.id === id).result.headOption) flatMap {
@@ -46,22 +56,32 @@ trait DatabaseActions extends DatabaseSetup with Protocols {
     }
   }
 
-  def deleteTopic(topicToRemove: TopicToRemove): Future[Either[ErrorMessage, StatusCode]] = {
+  def validate2(id: Long, secret: Long) = {
+     db.run(table.filter(_.id === id).result.headOption) flatMap {
+      case Some(s) => {
+        if (s.secret == secret) Future.successful(Right(true))
+        else Future.successful(Left(ErrorMessage("Secret do not match")))
+      }
+      case None => Future.successful(Left(ErrorMessage("There is no topic with this id.")))
+    }
+  }
+
+  def deleteTopic(topicToRemove: DataToRemove): Future[Either[ErrorMessage, String]] = {
     validate(topicToRemove.id, topicToRemove.secret).flatMap {
       case Left(l) => Future.successful(Left(l))
       case Right(r) => db.run(topics.filter(_.id === topicToRemove.id).delete)
-        .flatMap { x => Future.successful(Right(StatusCodes.OK))}
+        .flatMap(x => Future.successful(Right(x.toString)))
       }
   }
 
-  def updateTopic(updatedTopic: UpdatedTopic): Future[Either[ErrorMessage, StatusCode]] = {
-    val update = topics.filter(_.id === updatedTopic.id)
+  def updateTopic(topicToUpdate: DataToUpdate): Future[Either[ErrorMessage, StatusCode]] = {
+    val update = topics.filter(_.id === topicToUpdate.id)
       .map(t => (t.content, t.timestamp))
-      .update((updatedTopic.content, new java.util.Date))
+      .update((topicToUpdate.content, new java.util.Date))
 
-    validate(updatedTopic.id, updatedTopic.secret).flatMap {
+    validate(topicToUpdate.id, topicToUpdate.secret).flatMap {
       case Left(l) => Future.successful(Left(l))
-      case Right(r) => db.run(update).flatMap { x => Future.successful(Right(StatusCodes.OK)) }
+      case Right(r) => db.run(update).flatMap(x => Future.successful(Right(StatusCodes.OK)))
     }
   }
 
