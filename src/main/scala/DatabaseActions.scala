@@ -6,7 +6,6 @@ import scala.concurrent.Future
 
 trait DatabaseActions extends DatabaseSetup with Protocols {
   import DateConversion._
-  val rowsOnPage = 10
 
   def getAllTopics: Future[Seq[Topic]] = db.run(topics.result)
 
@@ -57,19 +56,19 @@ trait DatabaseActions extends DatabaseSetup with Protocols {
     }
   }
 
-  def getPaginatedResults(page: Long): Future[Option[Seq[Topic]]] = {
+  def getPaginatedResults(page: Long, limit: Long): Future[Option[Seq[Topic]]] = {
     val query = (for {
         r <- replies.sortBy(_.timestamp.desc)
         t <- topics.filter(_.id === r.topicID)
-      } yield t).drop((page - 1) * rowsOnPage).take(rowsOnPage).distinct
+      } yield t)
 
     if (page <= 0) Future.successful(None)
     else db.run(query.result).map(ts => Some(ts))
   }
 
-  def dropValue(size: Long, before: Long): Long = {
+  /*def dropValue(size: Long, before: Long): Long = {
     val proportions = before / size
-    (before - (rowsOnPage * proportions).floor).toLong
+    (before - (limit * proportions).floor).toLong
   }
 
   def getPaginatedResultsByTopic(id: Long): Future[Option[Seq[Reply]]] = {
@@ -92,7 +91,7 @@ trait DatabaseActions extends DatabaseSetup with Protocols {
       }
       case _ => Future.successful(None)
     }
-  }
+  }*/
 }
 
 

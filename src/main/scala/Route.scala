@@ -6,8 +6,17 @@ import scala.concurrent.ExecutionContext.Implicits.global
 trait Route extends DatabaseActions with Protocols {
   val route =
     pathPrefix("topic") {
+      parameters('page.as[Long].?, 'limit.as[Long].?) {(optionalPage, optionalLimit) =>
+        val page = optionalPage.getOrElse(1)
+        val limit = optionalLimit.getOrElse(50)
+        complete {
+          getPaginatedResults(page, limit).map[ToResponseMarshallable] {
+            case Some(s) => s
+            case None    => ErrorMessage(ErrorMessage.page0)
+          }
+        }
+      } ~
       pathEndOrSingleSlash {
-        get { complete (getAllTopics) } ~
         post {
           entity(as[Topic]) { topic =>
             complete {
@@ -43,7 +52,7 @@ trait Route extends DatabaseActions with Protocols {
             entity(as[DataToUpdate]) { topicToUpdate =>
               complete {
                 updateTopic(topicToUpdate).map[ToResponseMarshallable] {
-                  case s if s == 1 => NoContent
+                  case s if s == 1 => OK
                   case _ => (BadRequest, ErrorMessage(ErrorMessage.wrongTopicFormat))
                 }
               }
@@ -79,26 +88,6 @@ trait Route extends DatabaseActions with Protocols {
                   case None    => (NotFound, ErrorMessage(ErrorMessage.replyNotFound))
                 }
               }
-            }
-          }
-        }
-      } ~
-      path("page" / LongNumber) { page =>
-        get {
-          complete {
-            getPaginatedResults(page).map[ToResponseMarshallable] {
-              case Some(s) => s
-              case None    => ErrorMessage(ErrorMessage.page0)
-            }
-          }
-        }
-      } ~
-      path("id" / LongNumber) { id =>
-        get {
-          complete {
-            getPaginatedResultsByTopic(id),map[ToResponseMarshallable] {
-              case Some(s) => s
-              case None => ErrorMessage(ErrorMessage.topicNotFound)
             }
           }
         }
