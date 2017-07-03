@@ -6,6 +6,15 @@ import scala.language.implicitConversions
 case class DataToRemove(id: Long, secret: Long)
 case class DataToUpdate(id: Long, secret: Long, content: String)
 case class ErrorMessage(message: String)
+object ErrorMessage {
+  val topicNotFound = "There is no topic with this id."
+  val wrongTopicFormat = "Wrong topic format."
+  val replyNotFound = "There is no reply with this id."
+  val wrongReplyFormat = "There is no such reply."
+  val wrongSecret = "Secret do not match."
+  val page0 = "Pages start from 1."
+}
+
 
 trait Protocols extends SprayJsonSupport with DefaultJsonProtocol {
   implicit val timestampFormat: JsonFormat[Timestamp] = jsonFormat[Timestamp](TimestampReader, TimestampWriter)

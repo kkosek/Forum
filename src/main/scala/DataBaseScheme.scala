@@ -5,7 +5,6 @@ import java.util.Date
 case class Topic(id: Option[Long] = None, alias: String, email: String, content: String, topic: String, secret: Long, timestamp: Timestamp)
 case class Reply(id: Option[Long] = None, topicID: Long, alias: String, email: String, content: String, secret: Long, timestamp: Timestamp)
 
-
 trait DatabaseScheme {
   class TopicsTable(tag: Tag) extends Table[Topic] (tag, "topics") {
     def id = column[Long]("topic_id", O.PrimaryKey, O.AutoInc)
