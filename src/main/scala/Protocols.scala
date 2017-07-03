@@ -7,7 +7,7 @@ case class DataToRemove(id: Long, secret: Long)
 case class DataToUpdate(id: Long, secret: Long, content: String)
 case class ErrorMessage(message: String)
 object ErrorMessage {
-  val topicNotFound = "There is no topic with this id."
+  val topicNotFound = "There is no topic with this id ."
   val wrongTopicFormat = "Wrong topic format."
   val replyNotFound = "There is no reply with this id."
   val wrongReplyFormat = "There is no such reply."

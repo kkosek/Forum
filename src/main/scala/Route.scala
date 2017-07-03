@@ -6,7 +6,7 @@ import scala.concurrent.ExecutionContext.Implicits.global
 trait Route extends DatabaseActions with Protocols {
   val route =
     pathPrefix("topic") {
-      parameters('page.as[Long].?, 'limit.as[Long].?) {(optionalPage, optionalLimit) =>
+      parameters('page.as[Long].?, 'limit.as[Long].?) { (optionalPage, optionalLimit) =>
         val page = optionalPage.getOrElse(1)
         val limit = optionalLimit.getOrElse(50)
         complete {

@@ -1,13 +1,9 @@
 import slick.jdbc.PostgresProfile.api._
 import scala.concurrent.ExecutionContext.Implicits.global
-import akka.http.scaladsl.model.StatusCode
-import akka.http.scaladsl.model.StatusCodes
 import scala.concurrent.Future
 
 trait DatabaseActions extends DatabaseSetup with Protocols {
   import DateConversion._
-
-  def getAllTopics: Future[Seq[Topic]] = db.run(topics.result)
 
   def getTopic(id: Long): Future[Option[Topic]] =
     db.run(topics.filter(_.id === id).result.headOption)
