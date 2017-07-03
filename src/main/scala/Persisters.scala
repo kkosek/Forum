@@ -28,7 +28,7 @@ trait Persisters extends DatabaseSetup {
     (for {
       r <- replies.sortBy(_.timestamp.desc)
       t <- topics.filter(_.id === r.topicID)
-    } yield t).result
+    } yield t).drop(page * limit).take(limit).result
   }
 
   def dropValue(size: Long, before: Long, limit: Long): Long = {
@@ -49,7 +49,7 @@ trait Persisters extends DatabaseSetup {
     }
   }
 
-  def readReplies(topicID: Long, replyID: Long): DBIO[Seq[Reply]] = {
+  def readRepliesForTopic(topicID: Long, replyID: Long): DBIO[Seq[Reply]] = {
     getSizeOfRepliesForTopic(topicID).flatMap {
       size => {
         readPositionOfNthReply (topicID, replyID).flatMap { position =>
