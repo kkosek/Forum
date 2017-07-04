@@ -24,4 +24,8 @@ trait Services extends Persisters {
       case None => Future.successful(None)
     }
   }
+
+  def updateReply(reply: DataToUpdate): Future[Int] = db.run(changeReply(reply))
+
+  def removeReply(reply: DataToRemove): Future[Int] = db.run(deleteReply(reply))
 }

@@ -43,7 +43,7 @@ trait Route extends Services with Protocols {
               complete {
                 removeTopic(topicToRemove).map[ToResponseMarshallable] {
                   case n if n == 1 => NoContent
-                  case _ => ErrorMessage(ErrorMessage.wrongReplyFormat)
+                  case _ => ErrorMessage(ErrorMessage.wrongTopicFormat)
                 }
               }
             }
@@ -52,7 +52,7 @@ trait Route extends Services with Protocols {
             entity(as[DataToUpdate]) { topicToUpdate =>
               complete {
                 updateTopic(topicToUpdate).map[ToResponseMarshallable] {
-                  case s if s == 1 => OK
+                  case n if n == 1 => OK
                   case _ => (BadRequest, ErrorMessage(ErrorMessage.wrongTopicFormat))
                 }
               }
@@ -60,7 +60,7 @@ trait Route extends Services with Protocols {
           }
         } ~
         pathPrefix("reply") {
-          parameter('middleReplyID.as[Long]) => { middleReplyID =>
+          parameter('middleReplyID.as[Long]){ middleReplyID =>
             get {
               complete {
                 getRepliesForTopic(topicID, middleReplyID).map[ToResponseMarshallable] {
@@ -76,6 +76,27 @@ trait Route extends Services with Protocols {
                 complete {
                   addReply(reply).map[ToResponseMarshallable] {
                     case s if s == 1 => (Created, reply)
+                    case _ => (BadRequest, ErrorMessage(ErrorMessage.wrongReplyFormat))
+                  }
+                }
+              }
+            } ~
+            delete {
+              entity(as[DataToRemove]) { reply =>
+                complete {
+                  removeReply(reply).map[ToResponseMarshallable] {
+                    case n if n == 1 => NoContent
+                    case _ => ErrorMessage(ErrorMessage.wrongReplyFormat)
+                  }
+                }
+              }
+            } ~
+            patch {
+              entity(as[DataToUpdate]) { reply =>
+                complete {
+                  updateReply(reply).map[ToResponseMarshallable] {
+                    //reply to jest Reply to Update!
+                    case n if n == 1 => (OK, reply)
                     case _ => (BadRequest, ErrorMessage(ErrorMessage.wrongReplyFormat))
                   }
                 }

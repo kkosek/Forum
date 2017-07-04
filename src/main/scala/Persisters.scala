@@ -17,12 +17,22 @@ trait Persisters extends DatabaseSetup {
   def validateTopic(secret: Long, id: Long): Query[TopicsTable, Topic, Seq] =
     topics.filter(_.id === id).filter(_.secret === secret)
 
+  def validateReply(secret: Long, id: Long): Query[RepliesTable, Reply, Seq] =
+    replies.filter(_.id === id).filter(_.secret === secret)
+
   def deleteTopic(topic: DataToRemove): DBIO[Int] =
     validateTopic(topic.secret, topic.id).delete
 
   def changeTopic(topic: DataToUpdate): DBIO[Int] =
     validateTopic(topic.secret, topic.id).map(t => (t.content, t.timestamp))
     .update((topic.content, new java.util.Date))
+
+  def deleteReply(reply: DataToRemove): DBIO[Int] =
+    validateReply(reply.secret, reply.id).delete
+
+  def changeReply(reply: DataToUpdate): DBIO[Int] =
+    validateReply(reply.secret, reply.id).map(r => (r.content, r.timestamp))
+    .update((reply.content, new java.util.Date))
 
   def readTopics(page: Long, limit: Long): DBIO[Seq[Topic]] = {
     (for {
