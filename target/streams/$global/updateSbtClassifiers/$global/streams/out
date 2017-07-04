@@ -1,6 +1,7 @@
 [debug] Other repositories:
 [debug] Default repositories:
 [debug] Using inline dependencies specified in Scala.
+[debug] no default cache defined: set to /home/kasia/.ivy2/cache
 [debug] :: resolving dependencies :: default#forum$sbt_2.10;1.0
 [debug] 	confs: [default]
 [debug] 	validate = true
@@ -138,7 +139,6 @@
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {compile=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[default(compile)]}
 [info] Resolving org.scala-lang#scala-reflect;2.10.6 ...
 [debug] sbt-chain: Checking cache for: dependency: org.scala-lang#scala-reflect;2.10.6 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[debug] no default cache defined: set to /home/kasia/.ivy2/cache
 [debug] sbt-chain: module revision found in cache: org.scala-lang#scala-reflect;2.10.6
 [debug] 	found org.scala-lang#scala-reflect;2.10.6 in sbt-chain
 [debug] 	[2.10.6] org.scala-lang#scala-reflect;2.10.6
@@ -1779,9 +1779,9 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.15!apply-macro.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#template-resolver;0.1!template-resolver.jar
-[debug] :: resolution report :: resolve 1410ms :: artifacts dl 34ms
+[debug] :: resolution report :: resolve 3435ms :: artifacts dl 147ms
 [debug] 	report for default#forum$sbt_2.10;1.0 default produced in /home/kasia/Forum/target/resolution-cache/reports/default-forum$sbt_2.10-default.xml
-[debug] 	resolve done (1410ms resolve - 34ms download)
+[debug] 	resolve done (3435ms resolve - 147ms download)
 [debug] Using inline dependencies specified in Scala.
 [debug] :: resolving dependencies :: default#forum$sources_2.10;1.0
 [debug] 	confs: [default]
@@ -2459,6 +2459,6 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#incremental-compiler;0.13.15!incremental-compiler.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#logic;0.13.15!logic.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#main-settings;0.13.15!main-settings.jar(src)
-[debug] :: resolution report :: resolve 281ms :: artifacts dl 27ms
+[debug] :: resolution report :: resolve 657ms :: artifacts dl 55ms
 [debug] 	report for default#forum$sources_2.10;1.0 default produced in /home/kasia/Forum/target/resolution-cache/reports/default-forum$sources_2.10-default.xml
-[debug] 	resolve done (281ms resolve - 27ms download)
+[debug] 	resolve done (657ms resolve - 55ms download)

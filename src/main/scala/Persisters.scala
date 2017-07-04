@@ -1,5 +1,5 @@
 import slick.jdbc.PostgresProfile.api._
-
+import scala.concurrent.ExecutionContext.Implicits.global
 
 trait Persisters extends DatabaseSetup {
   import DateConversion._

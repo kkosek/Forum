@@ -3,14 +3,14 @@ import akka.http.scaladsl.model.StatusCodes._
 import akka.http.scaladsl.marshalling.ToResponseMarshallable
 import scala.concurrent.ExecutionContext.Implicits.global
 
-trait Route extends DatabaseActions with Protocols {
+trait Route extends Services with Protocols {
   val route =
     pathPrefix("topic") {
       parameters('page.as[Long].?, 'limit.as[Long].?) { (optionalPage, optionalLimit) =>
         val page = optionalPage.getOrElse(1)
         val limit = optionalLimit.getOrElse(50)
         complete {
-          getPaginatedResults(page, limit).map[ToResponseMarshallable] {
+          getTopics(page, limit).map[ToResponseMarshallable] {
             case Some(s) => s
             case None    => ErrorMessage(ErrorMessage.page0)
           }
@@ -41,7 +41,7 @@ trait Route extends DatabaseActions with Protocols {
           delete {
             entity(as[DataToRemove]) { topicToRemove =>
               complete {
-                deleteTopic(topicToRemove).map[ToResponseMarshallable] {
+                removeTopic(topicToRemove).map[ToResponseMarshallable] {
                   case n if n == 1 => NoContent
                   case _ => ErrorMessage(ErrorMessage.wrongReplyFormat)
                 }
@@ -60,15 +60,17 @@ trait Route extends DatabaseActions with Protocols {
           }
         } ~
         pathPrefix("reply") {
-          pathEndOrSingleSlash {
+          parameter('middleReplyID.as[Long]) => { middleReplyID =>
             get {
               complete {
-                getRepliesForTopic(topicID).map[ToResponseMarshallable] {
+                getRepliesForTopic(topicID, middleReplyID).map[ToResponseMarshallable] {
                   case Some(s) => s
                   case None    => (NotFound, ErrorMessage(ErrorMessage.topicNotFound))
                 }
               }
-            } ~
+            }
+          } ~
+          pathEndOrSingleSlash {
             post {
               entity(as[Reply]) { reply =>
                 complete {

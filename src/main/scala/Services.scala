@@ -13,8 +13,15 @@ trait Services extends Persisters {
 
   def updateTopic(topicToUpdate: DataToUpdate): Future[Int] = db.run(changeTopic(topicToUpdate))
 
-  def getTopics(page: Long, limit: Long): Future[Seq[Topic]] = db.run(readTopics(page, limit))
+  def getTopics(page: Long, limit: Long): Future[Option[Seq[Topic]]] = {
+    if(page == 0) Future.successful(None)
+    else db.run(readTopics(page, limit)).map(ts => Some(ts))
+  }
 
-  def getRepliesForTopic(topicID: Long, replyID: Long): Future[Seq[Reply]] =
-    db.run(readRepliesForTopic(topicID, replyID))
+  def getRepliesForTopic(topicID: Long, replyID: Long): Future[Option[Seq[Reply]]] = {
+    db.run(findTopic(topicID)).flatMap {
+      case Some(s) => db.run(readRepliesForTopic(topicID, replyID)).map(rs => Some(rs))
+      case None => Future.successful(None)
+    }
+  }
 }
