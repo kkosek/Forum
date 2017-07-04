@@ -7,8 +7,8 @@ trait Route extends Services with Protocols {
   val route =
     pathPrefix("topic") {
       parameters('page.as[Long].?, 'limit.as[Long].?) { (optionalPage, optionalLimit) =>
-        val page = optionalPage.getOrElse(1)
-        val limit = optionalLimit.getOrElse(50)
+        val page: Long = optionalPage.getOrElse(1)
+        val limit: Long = optionalLimit.getOrElse(50)
         complete {
           getTopics(page, limit).map[ToResponseMarshallable] {
             case Some(s) => s
@@ -52,7 +52,7 @@ trait Route extends Services with Protocols {
             entity(as[DataToUpdate]) { topicToUpdate =>
               complete {
                 updateTopic(topicToUpdate).map[ToResponseMarshallable] {
-                  case n if n == 1 => OK
+                  case Some(t) => (OK, t)
                   case _ => (BadRequest, ErrorMessage(ErrorMessage.wrongTopicFormat))
                 }
               }
@@ -95,9 +95,8 @@ trait Route extends Services with Protocols {
               entity(as[DataToUpdate]) { reply =>
                 complete {
                   updateReply(reply).map[ToResponseMarshallable] {
-                    //reply to jest Reply to Update!
-                    case n if n == 1 => (OK, reply)
-                    case _ => (BadRequest, ErrorMessage(ErrorMessage.wrongReplyFormat))
+                    case Some(r) => (OK, r)
+                    case None => (BadRequest, ErrorMessage(ErrorMessage.wrongReplyFormat))
                   }
                 }
               }

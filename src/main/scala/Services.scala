@@ -1,4 +1,5 @@
 import scala.concurrent.Future
+import scala.concurrent.ExecutionContext.Implicits.global
 
 trait Services extends Persisters {
   def getTopic(id: Long): Future[Option[Topic]] = db.run(findTopic(id))
@@ -11,21 +12,20 @@ trait Services extends Persisters {
 
   def removeTopic(topicToRemove: DataToRemove): Future[Int] = db.run(deleteTopic(topicToRemove))
 
-  def updateTopic(topicToUpdate: DataToUpdate): Future[Int] = db.run(changeTopic(topicToUpdate))
+  def updateTopic(topicToUpdate: DataToUpdate): Future[Option[Topic]] = db.run(changeTopic(topicToUpdate))
 
   def getTopics(page: Long, limit: Long): Future[Option[Seq[Topic]]] = {
     if(page == 0) Future.successful(None)
     else db.run(readTopics(page, limit)).map(ts => Some(ts))
   }
 
-  def getRepliesForTopic(topicID: Long, replyID: Long): Future[Option[Seq[Reply]]] = {
+  def getRepliesForTopic(topicID: Long, replyID: Long): Future[Option[Seq[Reply]]] =
     db.run(findTopic(topicID)).flatMap {
       case Some(s) => db.run(readRepliesForTopic(topicID, replyID)).map(rs => Some(rs))
       case None => Future.successful(None)
     }
-  }
 
-  def updateReply(reply: DataToUpdate): Future[Int] = db.run(changeReply(reply))
+  def updateReply(reply: DataToUpdate): Future[Option[Reply]] = db.run(changeReply(reply))
 
   def removeReply(reply: DataToRemove): Future[Int] = db.run(deleteReply(reply))
 }
