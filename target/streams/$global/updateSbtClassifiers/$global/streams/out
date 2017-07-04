@@ -1725,10 +1725,48 @@
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {compile=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {provided=[default(compile)]} => dependency: org.scala-lang#scala-compiler;2.10.6 {provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {compile=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[default(compile)]}
+[debug] == resolving dependencies default#forum$sbt_2.10;1.0->org.flywaydb#flyway-sbt;4.2.0 [default->default(compile)]
+[info] Resolving org.flywaydb#flyway-sbt;4.2.0 ...
+[debug] sbt-chain: Checking cache for: dependency: org.flywaydb#flyway-sbt;4.2.0 {default=[default(compile)]}
+[debug] sbt-chain: module revision found in cache: org.flywaydb#flyway-sbt;4.2.0
+[debug] 	found org.flywaydb#flyway-sbt;4.2.0 in sbt-chain
+[debug] 	[4.2.0] org.flywaydb#flyway-sbt;4.2.0
+[debug] == resolving dependencies default#forum$sbt_2.10;1.0->org.flywaydb#flyway-sbt;4.2.0 [default->runtime]
+[debug] == resolving dependencies default#forum$sbt_2.10;1.0->org.flywaydb#flyway-sbt;4.2.0 [default->compile]
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {provided=[compile(*), provided(*), runtime(*), master(compile)]} => dependency: org.scala-lang#scala-library;2.10.4 {provided=[compile(*), provided(*), runtime(*), master(compile)]}
+[debug] == resolving dependencies org.flywaydb#flyway-sbt;4.2.0->org.flywaydb#flyway-core;4.2.0 [compile->master(compile)]
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {provided=[compile(*), provided(*), runtime(*), master(compile)]} => dependency: org.scala-lang#scala-library;2.10.4 {provided=[compile(*), provided(*), runtime(*), master(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {provided=[compile(*), provided(*), runtime(*), master(compile)]} => dependency: org.scala-lang#scala-library;2.10.4 {provided=[compile(*), provided(*), runtime(*), master(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {provided=[compile(*), provided(*), runtime(*), master(compile)]} => dependency: org.scala-lang#scala-library;2.10.4 {provided=[compile(*), provided(*), runtime(*), master(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {provided=[compile(*), provided(*), runtime(*), master(compile)]} => dependency: org.scala-lang#scala-library;2.10.4 {provided=[compile(*), provided(*), runtime(*), master(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {provided=[compile(*), provided(*), runtime(*), master(compile)]} => dependency: org.scala-lang#scala-library;2.10.4 {provided=[compile(*), provided(*), runtime(*), master(compile)]}
+[info] Resolving org.flywaydb#flyway-core;4.2.0 ...
+[debug] sbt-chain: Checking cache for: dependency: org.flywaydb#flyway-core;4.2.0 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
+[debug] sbt-chain: module revision found in cache: org.flywaydb#flyway-core;4.2.0
+[debug] 	found org.flywaydb#flyway-core;4.2.0 in sbt-chain
+[debug] == resolving dependencies org.flywaydb#flyway-sbt;4.2.0->org.flywaydb#flyway-core;4.2.0 [compile->compile(*)]
+[debug] == resolving dependencies org.flywaydb#flyway-sbt;4.2.0->org.flywaydb#flyway-core;4.2.0 [compile->runtime(*)]
+[debug] == resolving dependencies org.flywaydb#flyway-sbt;4.2.0->org.flywaydb#flyway-core;4.2.0 [compile->compile]
+[debug] == resolving dependencies org.flywaydb#flyway-sbt;4.2.0->org.flywaydb#flyway-core;4.2.0 [compile->default(compile)]
+[debug] == resolving dependencies org.flywaydb#flyway-sbt;4.2.0->org.flywaydb#flyway-core;4.2.0 [compile->runtime]
+[debug] == resolving dependencies org.flywaydb#flyway-sbt;4.2.0->org.flywaydb#flyway-core;4.2.0 [compile->compile]
+[debug] == resolving dependencies org.flywaydb#flyway-sbt;4.2.0->org.flywaydb#flyway-core;4.2.0 [compile->master]
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {provided=[compile(*), provided(*), runtime(*), master(compile)]} => dependency: org.scala-lang#scala-library;2.10.4 {provided=[compile(*), provided(*), runtime(*), master(compile)]}
+[debug] == resolving dependencies org.flywaydb#flyway-sbt;4.2.0->org.flywaydb#flyway-core;4.2.0 [runtime->runtime(*)]
+[debug] == resolving dependencies org.flywaydb#flyway-sbt;4.2.0->org.flywaydb#flyway-core;4.2.0 [runtime->compile]
+[debug] == resolving dependencies default#forum$sbt_2.10;1.0->org.flywaydb#flyway-sbt;4.2.0 [default->master]
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {provided=[compile(*), provided(*), runtime(*), master(compile)]} => dependency: org.scala-lang#scala-library;2.10.4 {provided=[compile(*), provided(*), runtime(*), master(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {provided=[compile(*), provided(*), runtime(*), master(compile)]} => dependency: org.scala-lang#scala-library;2.10.4 {provided=[compile(*), provided(*), runtime(*), master(compile)]}
+[debug] == resolving dependencies default#forum$sbt_2.10;1.0->org.flywaydb#flyway-core;4.2.0 [default->default(compile)]
+[debug] == resolving dependencies default#forum$sbt_2.10;1.0->org.flywaydb#flyway-core;4.2.0 [default->runtime]
+[debug] == resolving dependencies default#forum$sbt_2.10;1.0->org.flywaydb#flyway-core;4.2.0 [default->compile]
+[debug] == resolving dependencies default#forum$sbt_2.10;1.0->org.flywaydb#flyway-core;4.2.0 [default->master]
 [debug] ignoring unhandled DependencyDescriptorMediator: class sbt.IvyScala$OverrideScalaMediator
 [debug] 	resolved ivy file produced in cache
 [debug] :: downloading artifacts ::
 [debug] 	[NOT REQUIRED] org.scala-sbt#sbt;0.13.15!sbt.jar
+[debug] 	[NOT REQUIRED] org.flywaydb#flyway-sbt;4.2.0!flyway-sbt.jar
+[debug] 	[NOT REQUIRED] org.flywaydb#flyway-core;4.2.0!flyway-core.jar
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.10.6!scala-library.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#main;0.13.15!main.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#compiler-interface;0.13.15!compiler-interface.jar
@@ -1779,9 +1817,9 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.15!apply-macro.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#template-resolver;0.1!template-resolver.jar
-[debug] :: resolution report :: resolve 3435ms :: artifacts dl 147ms
+[debug] :: resolution report :: resolve 1949ms :: artifacts dl 61ms
 [debug] 	report for default#forum$sbt_2.10;1.0 default produced in /home/kasia/Forum/target/resolution-cache/reports/default-forum$sbt_2.10-default.xml
-[debug] 	resolve done (3435ms resolve - 147ms download)
+[debug] 	resolve done (1949ms resolve - 61ms download)
 [debug] Using inline dependencies specified in Scala.
 [debug] :: resolving dependencies :: default#forum$sources_2.10;1.0
 [debug] 	confs: [default]
@@ -1825,6 +1863,26 @@
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#process;0.13.15
 [debug] 	found org.scala-sbt#process;0.13.15 in sbt-chain
 [debug] == resolving dependencies default#forum$sources_2.10;1.0->org.scala-sbt#process;0.13.15 [default->default(compile)]
+[debug] == resolving dependencies default#forum$sources_2.10;1.0->org.flywaydb#flyway-sbt;4.2.0 [default->default]
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, compile, runtime, default(compile), master, runtime(*), master(compile), compile(*)]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, compile, runtime, default(compile), master, runtime(*), master(compile), compile(*)]}
+[info] Resolving org.flywaydb#flyway-sbt;4.2.0 ...
+[debug] sbt-chain: Checking cache for: dependency: org.flywaydb#flyway-sbt;4.2.0 {default=[default, compile, runtime, default(compile), master]}
+[debug] sbt-chain: module revision found in cache: org.flywaydb#flyway-sbt;4.2.0
+[debug] 	found org.flywaydb#flyway-sbt;4.2.0 in sbt-chain
+[debug] 	[4.2.0] org.flywaydb#flyway-sbt;4.2.0
+[debug] == resolving dependencies default#forum$sources_2.10;1.0->org.flywaydb#flyway-sbt;4.2.0 [default->runtime]
+[debug] == resolving dependencies default#forum$sources_2.10;1.0->org.flywaydb#flyway-sbt;4.2.0 [default->compile]
+[debug] == resolving dependencies default#forum$sources_2.10;1.0->org.flywaydb#flyway-sbt;4.2.0 [default->master]
+[debug] == resolving dependencies default#forum$sources_2.10;1.0->org.flywaydb#flyway-sbt;4.2.0 [default->compile]
+[debug] == resolving dependencies default#forum$sources_2.10;1.0->org.flywaydb#flyway-sbt;4.2.0 [default->runtime]
+[debug] == resolving dependencies default#forum$sources_2.10;1.0->org.flywaydb#flyway-sbt;4.2.0 [default->compile]
+[debug] == resolving dependencies default#forum$sources_2.10;1.0->org.flywaydb#flyway-sbt;4.2.0 [default->default(compile)]
+[debug] == resolving dependencies default#forum$sources_2.10;1.0->org.flywaydb#flyway-sbt;4.2.0 [default->runtime]
+[debug] == resolving dependencies default#forum$sources_2.10;1.0->org.flywaydb#flyway-sbt;4.2.0 [default->compile]
+[debug] == resolving dependencies default#forum$sources_2.10;1.0->org.flywaydb#flyway-sbt;4.2.0 [default->master]
+[debug] == resolving dependencies default#forum$sources_2.10;1.0->org.flywaydb#flyway-sbt;4.2.0 [default->master]
 [debug] == resolving dependencies default#forum$sources_2.10;1.0->org.scala-sbt#classpath;0.13.15 [default->compile]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
@@ -2252,6 +2310,29 @@
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#control;0.13.15
 [debug] 	found org.scala-sbt#control;0.13.15 in sbt-chain
 [debug] == resolving dependencies default#forum$sources_2.10;1.0->org.scala-sbt#control;0.13.15 [default->default(compile)]
+[debug] == resolving dependencies default#forum$sources_2.10;1.0->org.flywaydb#flyway-core;4.2.0 [default->default]
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, compile, runtime, default(compile), master, runtime(*), master(compile), compile(*)]} => dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, compile, runtime, default(compile), master, runtime(*), master(compile), compile(*)]}
+[info] Resolving org.flywaydb#flyway-core;4.2.0 ...
+[debug] sbt-chain: Checking cache for: dependency: org.flywaydb#flyway-core;4.2.0 {default=[default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
+[debug] sbt-chain: module revision found in cache: org.flywaydb#flyway-core;4.2.0
+[debug] 	found org.flywaydb#flyway-core;4.2.0 in sbt-chain
+[debug] == resolving dependencies default#forum$sources_2.10;1.0->org.flywaydb#flyway-core;4.2.0 [default->runtime]
+[debug] == resolving dependencies default#forum$sources_2.10;1.0->org.flywaydb#flyway-core;4.2.0 [default->compile]
+[debug] == resolving dependencies default#forum$sources_2.10;1.0->org.flywaydb#flyway-core;4.2.0 [default->master]
+[debug] == resolving dependencies default#forum$sources_2.10;1.0->org.flywaydb#flyway-core;4.2.0 [default->compile]
+[debug] == resolving dependencies default#forum$sources_2.10;1.0->org.flywaydb#flyway-core;4.2.0 [default->runtime(*)]
+[debug] == resolving dependencies default#forum$sources_2.10;1.0->org.flywaydb#flyway-core;4.2.0 [default->compile]
+[debug] == resolving dependencies default#forum$sources_2.10;1.0->org.flywaydb#flyway-core;4.2.0 [default->master(compile)]
+[debug] == resolving dependencies default#forum$sources_2.10;1.0->org.flywaydb#flyway-core;4.2.0 [default->runtime]
+[debug] == resolving dependencies default#forum$sources_2.10;1.0->org.flywaydb#flyway-core;4.2.0 [default->compile]
+[debug] == resolving dependencies default#forum$sources_2.10;1.0->org.flywaydb#flyway-core;4.2.0 [default->default(compile)]
+[debug] == resolving dependencies default#forum$sources_2.10;1.0->org.flywaydb#flyway-core;4.2.0 [default->runtime]
+[debug] == resolving dependencies default#forum$sources_2.10;1.0->org.flywaydb#flyway-core;4.2.0 [default->compile]
+[debug] == resolving dependencies default#forum$sources_2.10;1.0->org.flywaydb#flyway-core;4.2.0 [default->master]
+[debug] == resolving dependencies default#forum$sources_2.10;1.0->org.flywaydb#flyway-core;4.2.0 [default->compile(*)]
+[debug] == resolving dependencies default#forum$sources_2.10;1.0->org.flywaydb#flyway-core;4.2.0 [default->master]
 [debug] == resolving dependencies default#forum$sources_2.10;1.0->org.scala-sbt#sbt;0.13.15 [default->compile]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.6 {default=[default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-reflect;2.10.6 {default=[default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.6 {default=[default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]} => dependency: org.scala-lang#scala-library;2.10.6 {default=[default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
@@ -2412,6 +2493,7 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#compile;0.13.15!compile.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#persist;0.13.15!persist.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#process;0.13.15!process.jar(src)
+[debug] 	[NOT REQUIRED] org.flywaydb#flyway-sbt;4.2.0!flyway-sbt.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#classpath;0.13.15!classpath.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#relation;0.13.15!relation.jar(src)
 [debug] 	[NOT REQUIRED] org.scalamacros#quasiquotes_2.10;2.0.1!quasiquotes_2.10.jar(src)
@@ -2448,6 +2530,7 @@
 [debug] 	[NOT REQUIRED] com.thoughtworks.paranamer#paranamer;2.6!paranamer.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#completion;0.13.15!completion.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#control;0.13.15!control.jar(src)
+[debug] 	[NOT REQUIRED] org.flywaydb#flyway-core;4.2.0!flyway-core.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#sbt;0.13.15!sbt.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#run;0.13.15!run.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt.ivy#ivy;2.3.0-sbt-48dd0744422128446aee9ac31aa356ee203cc9f4!ivy.jar(src)
@@ -2459,6 +2542,6 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#incremental-compiler;0.13.15!incremental-compiler.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#logic;0.13.15!logic.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#main-settings;0.13.15!main-settings.jar(src)
-[debug] :: resolution report :: resolve 657ms :: artifacts dl 55ms
+[debug] :: resolution report :: resolve 380ms :: artifacts dl 51ms
 [debug] 	report for default#forum$sources_2.10;1.0 default produced in /home/kasia/Forum/target/resolution-cache/reports/default-forum$sources_2.10-default.xml
-[debug] 	resolve done (657ms resolve - 55ms download)
+[debug] 	resolve done (380ms resolve - 51ms download)

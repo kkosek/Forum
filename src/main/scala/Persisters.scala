@@ -45,7 +45,7 @@ trait Persisters extends DatabaseSetup {
 
   def dropValue(size: Long, before: Long, limit: Long): Long = {
     val proportions = before / size
-    (before - (limit * proportions).floor).toLong:throws
+    (before - (limit * proportions).floor).toLong
   }
 
   def readSortedRepliesForTopic(id: Long): Query[RepliesTable, Reply, Seq] =
