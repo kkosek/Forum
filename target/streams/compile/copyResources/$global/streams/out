@@ -1,2 +1,5 @@
 [0m[[0mdebug[0m] [0mCopy resource mappings: [0m
+[0m[[0mdebug[0m] [0m	(/home/kasia/Forum/src/main/resources/db,/home/kasia/Forum/target/scala-2.12/classes/db)[0m
 [0m[[0mdebug[0m] [0m	(/home/kasia/Forum/src/main/resources/application.conf,/home/kasia/Forum/target/scala-2.12/classes/application.conf)[0m
+[0m[[0mdebug[0m] [0m	(/home/kasia/Forum/src/main/resources/db/migration,/home/kasia/Forum/target/scala-2.12/classes/db/migration)[0m
+[0m[[0mdebug[0m] [0m	(/home/kasia/Forum/src/main/resources/db/migration/V1__create_replies_and_topics_table.sql,/home/kasia/Forum/target/scala-2.12/classes/db/migration/V1__create_replies_and_topics_table.sql)[0m

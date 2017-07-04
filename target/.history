@@ -357,3 +357,49 @@ compile
 run
 compile
 run
+flywayMigrate
+compile
+flywayMigrate
+last *:flywayMigrate
+flywayMigrate
+compile
+flywayMigrate
+*:flywayMigrate
+last *:flywayMigrate
+flywayMigrate
+clean
+flywayMigrate
+clean
+flywayMigrate
+clean
+flywayMigrate
+clean
+flywayMigrate
+;clean;flywayMigrate
+flywayMigrate
+compile
+flywayMigrate
+compile
+flywayMigrate
+compile
+flywayMigrate
+compile
+flywayMigrate
+clean
+flywayMigrate
+clean
+flywayMigrate
+compie
+compile
+flywayMigrate
+last *:flywayMigrate
+compile
+last *:flywayMigrate
+compile
+flywayMigrate
+compile
+flywayMigrate
+compile
+flywayMigrate
+compile
+flywayMigrate

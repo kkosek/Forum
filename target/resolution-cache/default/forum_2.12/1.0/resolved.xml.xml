@@ -4,7 +4,7 @@
 		module="forum_2.12"
 		revision="1.0"
 		status="integration"
-		publication="20170704121821"
+		publication="20170704144522"
 	>
 		<description>
 		Forum
@@ -39,31 +39,11 @@
 		<dependency org="com.typesafe.slick" name="slick_2.12" rev="latest.integration" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.slick" name="slick-hikaricp_2.12" rev="latest.integration" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.akka" name="akka-actor_2.12" rev="latest.integration" conf="compile->default(compile)"/>
-		<dependency org="com.typesafe.akka" name="akka-agent_2.12" rev="latest.integration" conf="compile->default(compile)"/>
-		<dependency org="com.typesafe.akka" name="akka-camel_2.12" rev="latest.integration" conf="compile->default(compile)"/>
-		<dependency org="com.typesafe.akka" name="akka-cluster_2.12" rev="latest.integration" conf="compile->default(compile)"/>
-		<dependency org="com.typesafe.akka" name="akka-cluster-metrics_2.12" rev="latest.integration" conf="compile->default(compile)"/>
-		<dependency org="com.typesafe.akka" name="akka-cluster-sharding_2.12" rev="latest.integration" conf="compile->default(compile)"/>
-		<dependency org="com.typesafe.akka" name="akka-cluster-tools_2.12" rev="latest.integration" conf="compile->default(compile)"/>
-		<dependency org="com.typesafe.akka" name="akka-distributed-data_2.12" rev="latest.integration" conf="compile->default(compile)"/>
-		<dependency org="com.typesafe.akka" name="akka-multi-node-testkit_2.12" rev="latest.integration" conf="compile->default(compile)"/>
-		<dependency org="com.typesafe.akka" name="akka-osgi_2.12" rev="latest.integration" conf="compile->default(compile)"/>
-		<dependency org="com.typesafe.akka" name="akka-persistence_2.12" rev="latest.integration" conf="compile->default(compile)"/>
-		<dependency org="com.typesafe.akka" name="akka-persistence-query_2.12" rev="latest.integration" conf="compile->default(compile)"/>
-		<dependency org="com.typesafe.akka" name="akka-persistence-tck_2.12" rev="latest.integration" conf="compile->default(compile)"/>
-		<dependency org="com.typesafe.akka" name="akka-remote_2.12" rev="latest.integration" conf="compile->default(compile)"/>
-		<dependency org="com.typesafe.akka" name="akka-typed_2.12" rev="latest.integration" conf="compile->default(compile)"/>
-		<dependency org="com.typesafe.akka" name="akka-contrib_2.12" rev="latest.integration" conf="compile->default(compile)"/>
-		<dependency org="com.typesafe.akka" name="akka-http-core_2.12" rev="latest.integration" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.akka" name="akka-http_2.12" rev="latest.integration" conf="compile->default(compile)"/>
-		<dependency org="com.typesafe.akka" name="akka-http-testkit_2.12" rev="latest.integration" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.akka" name="akka-http-spray-json_2.12" rev="latest.integration" conf="compile->default(compile)"/>
-		<dependency org="com.typesafe.akka" name="akka-http-jackson_2.12" rev="latest.integration" conf="compile->default(compile)"/>
-		<dependency org="com.typesafe.akka" name="akka-http-xml_2.12" rev="latest.integration" conf="compile->default(compile)"/>
-		<dependency org="io.spray" name="spray-json_2.12" rev="latest.integration" conf="compile->default(compile)"/>
 		<dependency org="org.postgresql" name="postgresql" rev="latest.integration" conf="compile->default(compile)"/>
 		<dependency org="org.scalactic" name="scalactic_2.12" rev="latest.integration" conf="compile->default(compile)"/>
 		<dependency org="org.scalatest" name="scalatest_2.12" rev="latest.integration" conf="test->default(compile)"/>
-		<dependency org="com.github.nscala-time" name="nscala-time_2.12" rev="2.16.0" conf="compile->default(compile)"/>
+		<dependency org="com.h2database" name="h2" rev="latest.integration" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>
