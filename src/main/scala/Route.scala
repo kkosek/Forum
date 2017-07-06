@@ -3,25 +3,28 @@ import akka.http.scaladsl.model.StatusCodes._
 import akka.http.scaladsl.marshalling.ToResponseMarshallable
 import scala.concurrent.ExecutionContext.Implicits.global
 
-trait Route extends Services with Protocols {
+class Route extends ForumService(new ForumPersister) with Protocols {
   val route =
     pathPrefix("topic") {
       parameters('page.as[Long].?, 'limit.as[Long].?) { (optionalPage, optionalLimit) =>
-        val page: Long = optionalPage.getOrElse(1)
-        val limit: Long = optionalLimit.getOrElse(50)
-        complete {
-          getTopics(page, limit).map[ToResponseMarshallable] {
-            case Some(s) => s
-            case None    => ErrorMessage(ErrorMessage.page0)
-          }
+        val page = optionalPage match {
+          case Some(s) if s > 0 => s
+          case _ => 1
         }
+
+        val limit = optionalLimit match {
+          case Some(s) if s > 0 => s
+          case _ => 10
+        }
+
+        complete(getTopics(page, limit))
       } ~
       pathEndOrSingleSlash {
         post {
           entity(as[Topic]) { topic =>
             complete {
               addTopic(topic).map[ToResponseMarshallable] {
-                case s if s == 1 => (Created, topic)
+                case 1 => (Created, topic)
                 case _ => (BadRequest, ErrorMessage(ErrorMessage.wrongTopicFormat))
               }
             }
@@ -32,26 +35,26 @@ trait Route extends Services with Protocols {
         pathEndOrSingleSlash {
           get {
             complete {
-              getTopic(topicID).map[ToResponseMarshallable] {
+              findTopic(topicID).map[ToResponseMarshallable] {
                 case Some(s) => s
                 case None    => (NotFound, ErrorMessage(ErrorMessage.topicNotFound))
               }
             }
           } ~
           delete {
-            entity(as[DataToRemove]) { topicToRemove =>
+            entity(as[DeleteRequest]) { topic =>
               complete {
-                removeTopic(topicToRemove).map[ToResponseMarshallable] {
-                  case n if n == 1 => NoContent
+                deleteTopic(topic).map[ToResponseMarshallable] {
+                  case 1 => NoContent
                   case _ => ErrorMessage(ErrorMessage.wrongTopicFormat)
                 }
               }
             }
           } ~
           patch {
-            entity(as[DataToUpdate]) { topicToUpdate =>
+            entity(as[UpdateRequest]) { topic=>
               complete {
-                updateTopic(topicToUpdate).map[ToResponseMarshallable] {
+                updateTopic(topic).map[ToResponseMarshallable] {
                   case Some(t) => (OK, t)
                   case _ => (BadRequest, ErrorMessage(ErrorMessage.wrongTopicFormat))
                 }
@@ -75,24 +78,24 @@ trait Route extends Services with Protocols {
               entity(as[Reply]) { reply =>
                 complete {
                   addReply(reply).map[ToResponseMarshallable] {
-                    case s if s == 1 => (Created, reply)
+                    case 1 => (Created, reply)
                     case _ => (BadRequest, ErrorMessage(ErrorMessage.wrongReplyFormat))
                   }
                 }
               }
             } ~
             delete {
-              entity(as[DataToRemove]) { reply =>
+              entity(as[DeleteRequest]) { reply =>
                 complete {
-                  removeReply(reply).map[ToResponseMarshallable] {
-                    case n if n == 1 => NoContent
+                  deleteReply(reply).map[ToResponseMarshallable] {
+                    case 1 => NoContent
                     case _ => ErrorMessage(ErrorMessage.wrongReplyFormat)
                   }
                 }
               }
             } ~
             patch {
-              entity(as[DataToUpdate]) { reply =>
+              entity(as[UpdateRequest]) { reply =>
                 complete {
                   updateReply(reply).map[ToResponseMarshallable] {
                     case Some(r) => (OK, r)
@@ -105,7 +108,7 @@ trait Route extends Services with Protocols {
           path(LongNumber) { replyID =>
             get {
               complete {
-                getReply(replyID).map[ToResponseMarshallable] {
+                findReply(replyID).map[ToResponseMarshallable] {
                   case Some(s) => s
                   case None    => (NotFound, ErrorMessage(ErrorMessage.replyNotFound))
                 }

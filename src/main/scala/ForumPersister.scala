@@ -1,7 +1,7 @@
 import slick.jdbc.PostgresProfile.api._
 import scala.concurrent.ExecutionContext.Implicits.global
 
-trait Persisters extends DatabaseSetup {
+class ForumPersister extends DatabaseScheme {
   import DateConversion._
 
   def findTopic(id: Long): DBIO[Option[Topic]] = topics.filter(_.id === id).result.headOption
@@ -10,62 +10,63 @@ trait Persisters extends DatabaseSetup {
 
   def findReply(id: Long): DBIO[Option[Reply]] = replies.filter(_.id === id).result.headOption
 
-  def writeTopic(topic: Topic): DBIO[Int] = topics += topic
+  def addTopic(topic: Topic): DBIO[Int] = topics += topic
 
-  def writeReply(reply: Reply): DBIO[Int] = replies += reply
+  def addReply(reply: Reply): DBIO[Int] = replies += reply
 
-  def validateTopic(secret: Long, id: Long): Query[TopicsTable, Topic, Seq] =
+  private def validateTopic(secret: Long, id: Long) =
     topics.filter(_.id === id).filter(_.secret === secret)
 
-  def validateReply(secret: Long, id: Long): Query[RepliesTable, Reply, Seq] =
+  private def validateReply(secret: Long, id: Long) =
     replies.filter(_.id === id).filter(_.secret === secret)
 
-  def deleteTopic(topic: DataToRemove): DBIO[Int] =
+  def deleteTopic(topic: DeleteRequest): DBIO[Int] =
     validateTopic(topic.secret, topic.id).delete
 
-  def changeTopic(topic: DataToUpdate): DBIO[Option[Topic]] =
+  def updateTopic(topic: UpdateRequest): DBIO[Option[Topic]] =
     validateTopic(topic.secret, topic.id).map(t => (t.content, t.timestamp))
     .update((topic.content, new java.util.Date))
     .flatMap(x => findTopic(topic.id))
 
-  def deleteReply(reply: DataToRemove): DBIO[Int] =
+  def deleteReply(reply: DeleteRequest): DBIO[Int] =
     validateReply(reply.secret, reply.id).delete
 
-  def changeReply(reply: DataToUpdate): DBIO[Option[Reply]] =
+  def updateReply(reply: UpdateRequest): DBIO[Option[Reply]] =
     validateReply(reply.secret, reply.id).map(r => (r.content, r.timestamp))
     .update((reply.content, new java.util.Date))
       .flatMap(x => findReply(reply.id))
 
-  def readTopics(page: Long, limit: Long): DBIO[Seq[Topic]] = {
+  def getTopics(page: Long, limit: Long): DBIO[Seq[Topic]] =
     (for {
       r <- replies.sortBy(_.timestamp.desc)
       t <- topics.filter(_.id === r.topicID)
     } yield t).drop(page * limit).take(limit).result
-  }
 
-  def dropValue(size: Long, before: Long, limit: Long): Long = {
+  private def dropValue(size: Long, before: Long, limit: Long) = {
     val proportions = before / size
     (before - (limit * proportions).floor).toLong
   }
 
-  def readSortedRepliesForTopic(id: Long): Query[RepliesTable, Reply, Seq] =
+  private def getSortedRepliesForTopic(id: Long) =
     replies.filter(_.topicID === id).sortBy(_.timestamp)
 
   def getSizeOfRepliesForTopic(id: Long): DBIO[Int] =
-    readSortedRepliesForTopic(id).size.result
+    getSortedRepliesForTopic(id).size.result
 
-  def readPositionOfNthReply(topicID: Long, replyID: Long): DBIO[Int] =
+  private def getPositionOfNthReply(topicID: Long, replyID: Long) =
     findReply(replyID).flatMap {
-      case Some(r) => readSortedRepliesForTopic(topicID)
+      case Some(r) => getSortedRepliesForTopic(topicID)
         .sortBy(_.timestamp).filter(_.timestamp < r.timestamp).size.result
+      case None => replies.size.result
     }
 
-  def readRepliesForTopic(topicID: Long, replyID: Long): DBIO[Seq[Reply]] =
+  def getRepliesForTopic(topicID: Long, replyID: Long): DBIO[Seq[Reply]] =
+    fin
     getSizeOfRepliesForTopic(topicID).flatMap {
       size => {
-        readPositionOfNthReply (topicID, replyID).flatMap { position =>
+        getPositionOfNthReply (topicID, replyID).flatMap { position =>
           val f = dropValue(size, position, 10)
-          readSortedRepliesForTopic(topicID).drop(f).take(10).result
+          getSortedRepliesForTopic(topicID).drop(f).take(10).result
         }
       }
     }

@@ -4,7 +4,7 @@
 		module="forum_2.12"
 		revision="1.0"
 		status="integration"
-		publication="20170704144522"
+		publication="20170705111129"
 	>
 		<description>
 		Forum
@@ -38,12 +38,15 @@
 		<dependency org="com.typesafe.akka" name="akka-slf4j_2.12" rev="latest.integration" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.slick" name="slick_2.12" rev="latest.integration" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.slick" name="slick-hikaricp_2.12" rev="latest.integration" conf="compile->default(compile)"/>
+		<dependency org="com.h2database" name="h2" rev="latest.integration" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.akka" name="akka-actor_2.12" rev="latest.integration" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.akka" name="akka-typed_2.12" rev="latest.integration" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.akka" name="akka-contrib_2.12" rev="latest.integration" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.akka" name="akka-http-core_2.12" rev="latest.integration" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.akka" name="akka-http_2.12" rev="latest.integration" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.akka" name="akka-http-spray-json_2.12" rev="latest.integration" conf="compile->default(compile)"/>
+		<dependency org="io.spray" name="spray-json_2.12" rev="latest.integration" conf="compile->default(compile)"/>
 		<dependency org="org.postgresql" name="postgresql" rev="latest.integration" conf="compile->default(compile)"/>
-		<dependency org="org.scalactic" name="scalactic_2.12" rev="latest.integration" conf="compile->default(compile)"/>
-		<dependency org="org.scalatest" name="scalatest_2.12" rev="latest.integration" conf="test->default(compile)"/>
-		<dependency org="com.h2database" name="h2" rev="latest.integration" conf="compile->default(compile)"/>
+		<dependency org="pl.iterators" name="kebs-spray-json_2.12" rev="1.4.3" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>

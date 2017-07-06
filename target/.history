@@ -403,3 +403,13 @@ compile
 flywayMigrate
 compile
 flywayMigrate
+clean
+compile
+run
+compile
+clean
+compile
+run
+compile
+run
+compile

@@ -1,18 +1,19 @@
-CREATE TABLE topics (
+CREATE TABLE topics(
     id SERIAL PRIMARY KEY,
-    topic TEXT,
-    alias TEXT,
+    topic VARCHAR(100) NOT NULL,
+    alias VARCHAR(24) NOT NULL,
     content TEXT,
-    email TEXT,
-    secret BIGINT,
-    date TIMESTAMP WITHOUT TIME ZONE
+    email VARCHAR(24) NOT NULL,
+    secret BIGINT NOT NULL,
+    date TIMESTAMP WITHOUT TIME ZONE NOT NULL
 );
-CREATE TABLE replies (
+
+CREATE TABLE replies(
     id SERIAL PRIMARY KEY,
-    topic_id BIGINT,
-    alias TEXT,
+    topic_id BIGINT NOT NULL,
+    alias VARCHAR(24) NOT NULL,
     content TEXT,
-    email TEXT,
-    secret BIGINT,
-    date TIMESTAMP WITHOUT TIME ZONE
+    email VARCHAR(24) NOT NULL,
+    secret BIGINT NOT NULL,
+    date TIMESTAMP WITHOUT TIME ZONE NOT NULL
 );
